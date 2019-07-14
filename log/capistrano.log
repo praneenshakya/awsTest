@@ -1,0 +1,265 @@
+# Logfile created on 2019-07-10 16:08:33 +0545 by logger.rb/61378
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-07-10 16:08:33 +0545 cap staging deploy branch=develop
+  INFO ---------------------------------------------------------------------------
+  INFO [7bae4252] Running /usr/bin/env mkdir -p /tmp as ec2-user@3.105.197.0
+ DEBUG [7bae4252] Command: /usr/bin/env mkdir -p /tmp
+  INFO [5987ae82] Finished in 4.424 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-awsTest-staging-praneen.sh 0.0%
+  INFO Uploading /tmp/git-ssh-awsTest-staging-praneen.sh 100.0%
+  INFO [4cfc4470] Running /usr/bin/env chmod 700 /tmp/git-ssh-awsTest-staging-praneen.sh as ec2-user@3.105.197.0
+ DEBUG [4cfc4470] Command: /usr/bin/env chmod 700 /tmp/git-ssh-awsTest-staging-praneen.sh
+  INFO [3bbb5e77] Finished in 0.929 seconds with exit status 0 (successful).
+  INFO [f0968e4b] Running /usr/bin/env git ls-remote git@github.com:praneenshakya/awsTest.git HEAD as ec2-user@3.105.197.0
+ DEBUG [f0968e4b] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git ls-remote git@github.com:praneenshakya/awsTest.git HEAD )
+ DEBUG [152ddb18] 	/usr/bin/env: 
+ DEBUG [152ddb18] 	git
+ DEBUG [152ddb18] 	: No such file or directory
+ DEBUG [152ddb18] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-07-10 16:16:26 +0545 cap staging deploy branch=develop
+  INFO ---------------------------------------------------------------------------
+  INFO [d466865e] Running /usr/bin/env mkdir -p /tmp as ec2-user@3.105.197.0
+ DEBUG [d466865e] Command: /usr/bin/env mkdir -p /tmp
+  INFO [137cf7db] Finished in 5.254 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-awsTest-staging-praneen.sh 0.0%
+  INFO Uploading /tmp/git-ssh-awsTest-staging-praneen.sh 100.0%
+  INFO [6daf817c] Running /usr/bin/env chmod 700 /tmp/git-ssh-awsTest-staging-praneen.sh as ec2-user@3.105.197.0
+ DEBUG [6daf817c] Command: /usr/bin/env chmod 700 /tmp/git-ssh-awsTest-staging-praneen.sh
+  INFO [5f3bd360] Finished in 0.857 seconds with exit status 0 (successful).
+  INFO [5f8009b6] Running /usr/bin/env git ls-remote git@github.com:praneenshakya/awsTest.git HEAD as ec2-user@3.105.197.0
+ DEBUG [5f8009b6] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git ls-remote git@github.com:praneenshakya/awsTest.git HEAD )
+ DEBUG [3b7f0a31] 	Warning: Permanently added 'github.com,13.236.229.21' (RSA) to the list of known hosts.
+ DEBUG [3b7f0a31] 	e850ab8187ad4b29e672944e29ed7225de2f553c	HEAD
+  INFO [3b7f0a31] Finished in 3.565 seconds with exit status 0 (successful).
+  INFO [167a3647] Running /usr/bin/env mkdir -p /var/www/awsTest/shared /var/www/awsTest/releases as ec2-user@3.105.197.0
+ DEBUG [167a3647] Command: /usr/bin/env mkdir -p /var/www/awsTest/shared /var/www/awsTest/releases
+ DEBUG [20dbae73] 	mkdir: 
+ DEBUG [20dbae73] 	cannot create directory ‘/var/www’
+ DEBUG [20dbae73] 	: Permission denied
+ DEBUG [20dbae73] 	
+ DEBUG [20dbae73] 	mkdir: 
+ DEBUG [20dbae73] 	cannot create directory ‘/var/www’
+ DEBUG [20dbae73] 	: Permission denied
+ DEBUG [20dbae73] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-07-10 16:18:42 +0545 cap staging deploy branch=develop
+  INFO ---------------------------------------------------------------------------
+  INFO [c001699f] Running /usr/bin/env mkdir -p /tmp as ec2-user@3.105.197.0
+ DEBUG [c001699f] Command: /usr/bin/env mkdir -p /tmp
+  INFO [61f7332f] Finished in 3.954 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-awsTest-staging-praneen.sh 0.0%
+  INFO Uploading /tmp/git-ssh-awsTest-staging-praneen.sh 100.0%
+  INFO [adfd2772] Running /usr/bin/env chmod 700 /tmp/git-ssh-awsTest-staging-praneen.sh as ec2-user@3.105.197.0
+ DEBUG [adfd2772] Command: /usr/bin/env chmod 700 /tmp/git-ssh-awsTest-staging-praneen.sh
+  INFO [209f9baf] Finished in 0.921 seconds with exit status 0 (successful).
+  INFO [0aa36a47] Running /usr/bin/env git ls-remote git@github.com:praneenshakya/awsTest.git HEAD as ec2-user@3.105.197.0
+ DEBUG [0aa36a47] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git ls-remote git@github.com:praneenshakya/awsTest.git HEAD )
+ DEBUG [16360241] 	Warning: Permanently added the RSA host key for IP address '13.237.44.5' to the list of known hosts.
+ DEBUG [16360241] 	e850ab8187ad4b29e672944e29ed7225de2f553c	HEAD
+  INFO [16360241] Finished in 3.585 seconds with exit status 0 (successful).
+  INFO [a20d78c9] Running /usr/bin/env mkdir -p /var/www/awsTest/shared /var/www/awsTest/releases as ec2-user@3.105.197.0
+ DEBUG [a20d78c9] Command: /usr/bin/env mkdir -p /var/www/awsTest/shared /var/www/awsTest/releases
+ DEBUG [fe3c258a] 	mkdir: 
+ DEBUG [fe3c258a] 	cannot create directory ‘/var/www’
+ DEBUG [fe3c258a] 	: Permission denied
+ DEBUG [fe3c258a] 	
+ DEBUG [fe3c258a] 	mkdir: 
+ DEBUG [fe3c258a] 	cannot create directory ‘/var/www’
+ DEBUG [fe3c258a] 	: Permission denied
+ DEBUG [fe3c258a] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-07-10 16:22:37 +0545 cap staging deploy branch=develop
+  INFO ---------------------------------------------------------------------------
+  INFO [a3891c60] Running /usr/bin/env mkdir -p /tmp as ec2-user@3.105.197.0
+ DEBUG [a3891c60] Command: /usr/bin/env mkdir -p /tmp
+  INFO [6fc588a1] Finished in 4.793 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-awsTest-staging-praneen.sh 0.0%
+  INFO Uploading /tmp/git-ssh-awsTest-staging-praneen.sh 100.0%
+  INFO [d153fdb6] Running /usr/bin/env chmod 700 /tmp/git-ssh-awsTest-staging-praneen.sh as ec2-user@3.105.197.0
+ DEBUG [d153fdb6] Command: /usr/bin/env chmod 700 /tmp/git-ssh-awsTest-staging-praneen.sh
+  INFO [35a9e9cf] Finished in 0.921 seconds with exit status 0 (successful).
+  INFO [edbede79] Running /usr/bin/env git ls-remote git@github.com:praneenshakya/awsTest.git HEAD as ec2-user@3.105.197.0
+ DEBUG [edbede79] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git ls-remote git@github.com:praneenshakya/awsTest.git HEAD )
+ DEBUG [c942a23d] 	e850ab8187ad4b29e672944e29ed7225de2f553c	HEAD
+  INFO [c942a23d] Finished in 3.646 seconds with exit status 0 (successful).
+  INFO [1e86713c] Running /usr/bin/env mkdir -p /home/projects/app/shared /home/projects/app/releases as ec2-user@3.105.197.0
+ DEBUG [1e86713c] Command: /usr/bin/env mkdir -p /home/projects/app/shared /home/projects/app/releases
+ DEBUG [4911d796] 	mkdir: 
+ DEBUG [4911d796] 	cannot create directory ‘/home/projects’
+ DEBUG [4911d796] 	: Permission denied
+ DEBUG [4911d796] 	
+ DEBUG [4911d796] 	mkdir: 
+ DEBUG [4911d796] 	cannot create directory ‘/home/projects’
+ DEBUG [4911d796] 	: Permission denied
+ DEBUG [4911d796] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-07-10 17:09:29 +0545 cap staging deploy branch=develop
+  INFO ---------------------------------------------------------------------------
+  INFO [3ca4de63] Running /usr/bin/env mkdir -p /tmp as ec2-user@3.105.197.0
+ DEBUG [3ca4de63] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-07-10 17:10:18 +0545 cap staging deploy branch=develop
+  INFO ---------------------------------------------------------------------------
+  INFO [f314af31] Running /usr/bin/env mkdir -p /tmp as ec2-user@3.105.197.0
+ DEBUG [f314af31] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-07-10 17:11:08 +0545 cap staging deploy branch=develop
+  INFO ---------------------------------------------------------------------------
+  INFO [b529c55c] Running /usr/bin/env mkdir -p /tmp as ec2-user@3.105.197.0
+ DEBUG [b529c55c] Command: /usr/bin/env mkdir -p /tmp
+  INFO [25bb802f] Finished in 3.722 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-awsTest-staging-praneen.sh 0.0%
+  INFO Uploading /tmp/git-ssh-awsTest-staging-praneen.sh 100.0%
+  INFO [5e026e01] Running /usr/bin/env chmod 700 /tmp/git-ssh-awsTest-staging-praneen.sh as ec2-user@3.105.197.0
+ DEBUG [5e026e01] Command: /usr/bin/env chmod 700 /tmp/git-ssh-awsTest-staging-praneen.sh
+  INFO [7a27ebe3] Finished in 0.869 seconds with exit status 0 (successful).
+  INFO [4676f217] Running /usr/bin/env git ls-remote git@github.com:praneenshakya/awsTest.git HEAD as ec2-user@3.105.197.0
+ DEBUG [4676f217] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git ls-remote git@github.com:praneenshakya/awsTest.git HEAD )
+ DEBUG [763901b9] 	Warning: Permanently added the RSA host key for IP address '52.64.108.95' to the list of known hosts.
+ DEBUG [763901b9] 	e850ab8187ad4b29e672944e29ed7225de2f553c	HEAD
+  INFO [763901b9] Finished in 3.370 seconds with exit status 0 (successful).
+  INFO [50080fe6] Running /usr/bin/env mkdir -p /home/ec2-user/projects/app/shared /home/ec2-user/projects/app/releases as ec2-user@3.105.197.0
+ DEBUG [50080fe6] Command: /usr/bin/env mkdir -p /home/ec2-user/projects/app/shared /home/ec2-user/projects/app/releases
+  INFO [fc68d54c] Finished in 0.878 seconds with exit status 0 (successful).
+ DEBUG [0b38304a] Running [ -f /home/ec2-user/projects/app/current/REVISION ] as ec2-user@3.105.197.0
+ DEBUG [0b38304a] Command: [ -f /home/ec2-user/projects/app/current/REVISION ]
+ DEBUG [b0804b64] Finished in 0.913 seconds with exit status 1 (failed).
+ DEBUG [f622439f] Running [ -f /home/ec2-user/projects/app/repo/HEAD ] as ec2-user@3.105.197.0
+ DEBUG [f622439f] Command: [ -f /home/ec2-user/projects/app/repo/HEAD ]
+ DEBUG [3b441818] Finished in 0.909 seconds with exit status 1 (failed).
+ DEBUG [8fe61f54] Running if test ! -d /home/ec2-user/projects/app; then echo "Directory does not exist '/home/ec2-user/projects/app'" 1>&2; false; fi as ec2-user@3.105.197.0
+ DEBUG [8fe61f54] Command: if test ! -d /home/ec2-user/projects/app; then echo "Directory does not exist '/home/ec2-user/projects/app'" 1>&2; false; fi
+ DEBUG [fc1a0b00] Finished in 0.920 seconds with exit status 0 (successful).
+  INFO [2a4d2721] Running /usr/bin/env git clone --mirror git@github.com:praneenshakya/awsTest.git /home/ec2-user/projects/app/repo as ec2-user@3.105.197.0
+ DEBUG [2a4d2721] Command: cd /home/ec2-user/projects/app && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git clone --mirror git@github.com:praneenshakya/awsTest.git /home/ec2-user/projects/app/repo )
+ DEBUG [15a1e724] 	Cloning into bare repository '/home/ec2-user/projects/app/repo'...
+  INFO [15a1e724] Finished in 4.506 seconds with exit status 0 (successful).
+ DEBUG [88506e66] Running if test ! -d /home/ec2-user/projects/app/repo; then echo "Directory does not exist '/home/ec2-user/projects/app/repo'" 1>&2; false; fi as ec2-user@3.105.197.0
+ DEBUG [88506e66] Command: if test ! -d /home/ec2-user/projects/app/repo; then echo "Directory does not exist '/home/ec2-user/projects/app/repo'" 1>&2; false; fi
+ DEBUG [3eacc239] Finished in 0.921 seconds with exit status 0 (successful).
+  INFO [cfdcb5e1] Running /usr/bin/env git remote set-url origin git@github.com:praneenshakya/awsTest.git as ec2-user@3.105.197.0
+ DEBUG [cfdcb5e1] Command: cd /home/ec2-user/projects/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git remote set-url origin git@github.com:praneenshakya/awsTest.git )
+  INFO [24c01b65] Finished in 0.919 seconds with exit status 0 (successful).
+  INFO [69e9b86b] Running /usr/bin/env git remote update --prune as ec2-user@3.105.197.0
+ DEBUG [69e9b86b] Command: cd /home/ec2-user/projects/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [4c08f535] 	Fetching origin
+  INFO [4c08f535] Finished in 3.788 seconds with exit status 0 (successful).
+ DEBUG [1861661b] Running if test ! -d /home/ec2-user/projects/app/repo; then echo "Directory does not exist '/home/ec2-user/projects/app/repo'" 1>&2; false; fi as ec2-user@3.105.197.0
+ DEBUG [1861661b] Command: if test ! -d /home/ec2-user/projects/app/repo; then echo "Directory does not exist '/home/ec2-user/projects/app/repo'" 1>&2; false; fi
+ DEBUG [957e1e6f] Finished in 0.923 seconds with exit status 0 (successful).
+  INFO [4f75edde] Running /usr/bin/env mkdir -p /home/ec2-user/projects/app/releases/20190710112633 as ec2-user@3.105.197.0
+ DEBUG [4f75edde] Command: cd /home/ec2-user/projects/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env mkdir -p /home/ec2-user/projects/app/releases/20190710112633 )
+  INFO [a59abc18] Finished in 0.919 seconds with exit status 0 (successful).
+  INFO [ef5b5a0f] Running /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /home/ec2-user/projects/app/releases/20190710112633 as ec2-user@3.105.197.0
+ DEBUG [ef5b5a0f] Command: cd /home/ec2-user/projects/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /home/ec2-user/projects/app/releases/20190710112633 )
+  INFO [d3204a6a] Finished in 1.018 seconds with exit status 0 (successful).
+ DEBUG [16d3e06d] Running if test ! -d /home/ec2-user/projects/app/repo; then echo "Directory does not exist '/home/ec2-user/projects/app/repo'" 1>&2; false; fi as ec2-user@3.105.197.0
+ DEBUG [16d3e06d] Command: if test ! -d /home/ec2-user/projects/app/repo; then echo "Directory does not exist '/home/ec2-user/projects/app/repo'" 1>&2; false; fi
+ DEBUG [a1d1b666] Finished in 0.820 seconds with exit status 0 (successful).
+ DEBUG [ad4fd28c] Running /usr/bin/env git rev-list --max-count=1 develop as ec2-user@3.105.197.0
+ DEBUG [ad4fd28c] Command: cd /home/ec2-user/projects/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git rev-list --max-count=1 develop )
+ DEBUG [f1e09c4d] 	e850ab8187ad4b29e672944e29ed7225de2f553c
+ DEBUG [f1e09c4d] Finished in 0.922 seconds with exit status 0 (successful).
+ DEBUG [1e58907a] Running if test ! -d /home/ec2-user/projects/app/releases/20190710112633; then echo "Directory does not exist '/home/ec2-user/projects/app/releases/20190710112633'" 1>&2; false; fi as ec2-user@3.105.197.0
+ DEBUG [1e58907a] Command: if test ! -d /home/ec2-user/projects/app/releases/20190710112633; then echo "Directory does not exist '/home/ec2-user/projects/app/releases/20190710112633'" 1>&2; false; fi
+ DEBUG [7e327fa9] Finished in 0.917 seconds with exit status 0 (successful).
+  INFO [dd9379a1] Running /usr/bin/env echo "e850ab8187ad4b29e672944e29ed7225de2f553c" > REVISION as ec2-user@3.105.197.0
+ DEBUG [dd9379a1] Command: cd /home/ec2-user/projects/app/releases/20190710112633 && /usr/bin/env echo "e850ab8187ad4b29e672944e29ed7225de2f553c" > REVISION
+  INFO [7a1e27a2] Finished in 0.922 seconds with exit status 0 (successful).
+  INFO [688a06fe] Running /usr/bin/env ln -s /home/ec2-user/projects/app/releases/20190710112633 /home/ec2-user/projects/app/releases/current as ec2-user@3.105.197.0
+ DEBUG [688a06fe] Command: /usr/bin/env ln -s /home/ec2-user/projects/app/releases/20190710112633 /home/ec2-user/projects/app/releases/current
+  INFO [393d24ea] Finished in 0.915 seconds with exit status 0 (successful).
+  INFO [eb102390] Running /usr/bin/env mv /home/ec2-user/projects/app/releases/current /home/ec2-user/projects/app as ec2-user@3.105.197.0
+ DEBUG [eb102390] Command: /usr/bin/env mv /home/ec2-user/projects/app/releases/current /home/ec2-user/projects/app
+  INFO [b89b3d6d] Finished in 0.922 seconds with exit status 0 (successful).
+ DEBUG [8e39588b] Running /usr/bin/env ls -x /home/ec2-user/projects/app/releases as ec2-user@3.105.197.0
+ DEBUG [8e39588b] Command: /usr/bin/env ls -x /home/ec2-user/projects/app/releases
+ DEBUG [89e84ecd] 	20190710112633
+ DEBUG [89e84ecd] Finished in 0.919 seconds with exit status 0 (successful).
+ DEBUG [ce52d176] Running if test ! -d /home/ec2-user/projects/app/releases; then echo "Directory does not exist '/home/ec2-user/projects/app/releases'" 1>&2; false; fi as ec2-user@3.105.197.0
+ DEBUG [ce52d176] Command: if test ! -d /home/ec2-user/projects/app/releases; then echo "Directory does not exist '/home/ec2-user/projects/app/releases'" 1>&2; false; fi
+ DEBUG [0f21de9d] Finished in 0.919 seconds with exit status 0 (successful).
+  INFO [798495e6] Running /usr/bin/env echo "Branch develop (at e850ab8187ad4b29e672944e29ed7225de2f553c) deployed as release 20190710112633 by praneen" >> /home/ec2-user/projects/app/revisions.log as ec2-user@3.105.197.0
+ DEBUG [798495e6] Command: cd /home/ec2-user/projects/app/releases && /usr/bin/env echo "Branch develop (at e850ab8187ad4b29e672944e29ed7225de2f553c) deployed as release 20190710112633 by praneen" >> /home/ec2-user/projects/app/revisions.log
+  INFO [5ac55d25] Finished in 0.919 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-07-14 09:27:09 +0545 cap staging deploy branch=develop
+  INFO ---------------------------------------------------------------------------
+  INFO [467879db] Running /usr/bin/env mkdir -p /tmp as ubuntu@13.211.171.135
+ DEBUG [467879db] Command: /usr/bin/env mkdir -p /tmp
+  INFO [1e0d5a5d] Finished in 4.904 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-awsTest-staging-praneen.sh 0.0%
+  INFO Uploading /tmp/git-ssh-awsTest-staging-praneen.sh 100.0%
+  INFO [a71e1f54] Running /usr/bin/env chmod 700 /tmp/git-ssh-awsTest-staging-praneen.sh as ubuntu@13.211.171.135
+ DEBUG [a71e1f54] Command: /usr/bin/env chmod 700 /tmp/git-ssh-awsTest-staging-praneen.sh
+  INFO [e1091e4a] Finished in 0.817 seconds with exit status 0 (successful).
+  INFO [56211ec7] Running /usr/bin/env git ls-remote git@github.com:praneenshakya/awsTest.git HEAD as ubuntu@13.211.171.135
+ DEBUG [56211ec7] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git ls-remote git@github.com:praneenshakya/awsTest.git HEAD )
+ DEBUG [7f8aa970] 	Warning: Permanently added 'github.com,13.237.44.5' (RSA) to the list of known hosts.
+ DEBUG [7f8aa970] 	e850ab8187ad4b29e672944e29ed7225de2f553c	HEAD
+  INFO [7f8aa970] Finished in 3.409 seconds with exit status 0 (successful).
+  INFO [43c066c0] Running /usr/bin/env mkdir -p /home/ubuntu/app/shared /home/ubuntu/app/releases as ubuntu@13.211.171.135
+ DEBUG [43c066c0] Command: /usr/bin/env mkdir -p /home/ubuntu/app/shared /home/ubuntu/app/releases
+  INFO [ced57b45] Finished in 0.847 seconds with exit status 0 (successful).
+ DEBUG [f66a7a1a] Running [ -f /home/ubuntu/app/current/REVISION ] as ubuntu@13.211.171.135
+ DEBUG [f66a7a1a] Command: [ -f /home/ubuntu/app/current/REVISION ]
+ DEBUG [342e6e55] Finished in 0.859 seconds with exit status 1 (failed).
+ DEBUG [b4beef50] Running [ -f /home/ubuntu/app/repo/HEAD ] as ubuntu@13.211.171.135
+ DEBUG [b4beef50] Command: [ -f /home/ubuntu/app/repo/HEAD ]
+ DEBUG [1ced51d3] Finished in 0.976 seconds with exit status 1 (failed).
+ DEBUG [3c5ff9ac] Running if test ! -d /home/ubuntu/app; then echo "Directory does not exist '/home/ubuntu/app'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [3c5ff9ac] Command: if test ! -d /home/ubuntu/app; then echo "Directory does not exist '/home/ubuntu/app'" 1>&2; false; fi
+ DEBUG [b12ba521] Finished in 0.921 seconds with exit status 0 (successful).
+  INFO [0267872f] Running /usr/bin/env git clone --mirror git@github.com:praneenshakya/awsTest.git /home/ubuntu/app/repo as ubuntu@13.211.171.135
+ DEBUG [0267872f] Command: cd /home/ubuntu/app && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git clone --mirror git@github.com:praneenshakya/awsTest.git /home/ubuntu/app/repo )
+ DEBUG [544398ce] 	Cloning into bare repository '/home/ubuntu/app/repo'...
+  INFO [544398ce] Finished in 4.404 seconds with exit status 0 (successful).
+ DEBUG [37fbb72a] Running if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [37fbb72a] Command: if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi
+ DEBUG [0ee33b26] Finished in 0.894 seconds with exit status 0 (successful).
+  INFO [eb12f676] Running /usr/bin/env git remote set-url origin git@github.com:praneenshakya/awsTest.git as ubuntu@13.211.171.135
+ DEBUG [eb12f676] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git remote set-url origin git@github.com:praneenshakya/awsTest.git )
+  INFO [b1f5c678] Finished in 0.872 seconds with exit status 0 (successful).
+  INFO [27292d5e] Running /usr/bin/env git remote update --prune as ubuntu@13.211.171.135
+ DEBUG [27292d5e] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [fdd26f13] 	Fetching origin
+  INFO [fdd26f13] Finished in 3.656 seconds with exit status 0 (successful).
+ DEBUG [f0624d09] Running if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [f0624d09] Command: if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi
+ DEBUG [f3f06468] Finished in 0.817 seconds with exit status 0 (successful).
+  INFO [d42d7c9b] Running /usr/bin/env mkdir -p /home/ubuntu/app/releases/20190714034224 as ubuntu@13.211.171.135
+ DEBUG [d42d7c9b] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env mkdir -p /home/ubuntu/app/releases/20190714034224 )
+  INFO [8365e62f] Finished in 0.921 seconds with exit status 0 (successful).
+  INFO [140d8cf5] Running /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /home/ubuntu/app/releases/20190714034224 as ubuntu@13.211.171.135
+ DEBUG [140d8cf5] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /home/ubuntu/app/releases/20190714034224 )
+  INFO [2a50b4a6] Finished in 0.919 seconds with exit status 0 (successful).
+ DEBUG [b23da92a] Running if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [b23da92a] Command: if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi
+ DEBUG [7cc49838] Finished in 0.919 seconds with exit status 0 (successful).
+ DEBUG [126ec5cc] Running /usr/bin/env git rev-list --max-count=1 develop as ubuntu@13.211.171.135
+ DEBUG [126ec5cc] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git rev-list --max-count=1 develop )
+ DEBUG [a4a31253] 	e850ab8187ad4b29e672944e29ed7225de2f553c
+ DEBUG [a4a31253] Finished in 0.826 seconds with exit status 0 (successful).
+ DEBUG [ff936a82] Running if test ! -d /home/ubuntu/app/releases/20190714034224; then echo "Directory does not exist '/home/ubuntu/app/releases/20190714034224'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [ff936a82] Command: if test ! -d /home/ubuntu/app/releases/20190714034224; then echo "Directory does not exist '/home/ubuntu/app/releases/20190714034224'" 1>&2; false; fi
+ DEBUG [d0aff8a5] Finished in 0.913 seconds with exit status 0 (successful).
+  INFO [1d90b1cb] Running /usr/bin/env echo "e850ab8187ad4b29e672944e29ed7225de2f553c" > REVISION as ubuntu@13.211.171.135
+ DEBUG [1d90b1cb] Command: cd /home/ubuntu/app/releases/20190714034224 && /usr/bin/env echo "e850ab8187ad4b29e672944e29ed7225de2f553c" > REVISION
+  INFO [95bb8ac5] Finished in 0.919 seconds with exit status 0 (successful).
+  INFO [0649b599] Running /usr/bin/env ln -s /home/ubuntu/app/releases/20190714034224 /home/ubuntu/app/releases/current as ubuntu@13.211.171.135
+ DEBUG [0649b599] Command: /usr/bin/env ln -s /home/ubuntu/app/releases/20190714034224 /home/ubuntu/app/releases/current
+  INFO [737ee0e7] Finished in 0.917 seconds with exit status 0 (successful).
+  INFO [39d6dc9e] Running /usr/bin/env mv /home/ubuntu/app/releases/current /home/ubuntu/app as ubuntu@13.211.171.135
+ DEBUG [39d6dc9e] Command: /usr/bin/env mv /home/ubuntu/app/releases/current /home/ubuntu/app
+  INFO [0b9aecc5] Finished in 0.920 seconds with exit status 0 (successful).
+ DEBUG [280dd90c] Running /usr/bin/env ls -x /home/ubuntu/app/releases as ubuntu@13.211.171.135
+ DEBUG [280dd90c] Command: /usr/bin/env ls -x /home/ubuntu/app/releases
+ DEBUG [1db6110a] 	20190714034224
+ DEBUG [1db6110a] Finished in 1.022 seconds with exit status 0 (successful).
+ DEBUG [cafb718d] Running if test ! -d /home/ubuntu/app/releases; then echo "Directory does not exist '/home/ubuntu/app/releases'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [cafb718d] Command: if test ! -d /home/ubuntu/app/releases; then echo "Directory does not exist '/home/ubuntu/app/releases'" 1>&2; false; fi
+ DEBUG [8bb63675] Finished in 0.738 seconds with exit status 0 (successful).
+  INFO [60820d0f] Running /usr/bin/env echo "Branch develop (at e850ab8187ad4b29e672944e29ed7225de2f553c) deployed as release 20190714034224 by praneen" >> /home/ubuntu/app/revisions.log as ubuntu@13.211.171.135
+ DEBUG [60820d0f] Command: cd /home/ubuntu/app/releases && /usr/bin/env echo "Branch develop (at e850ab8187ad4b29e672944e29ed7225de2f553c) deployed as release 20190714034224 by praneen" >> /home/ubuntu/app/revisions.log
+  INFO [67aec3fe] Finished in 0.999 seconds with exit status 0 (successful).

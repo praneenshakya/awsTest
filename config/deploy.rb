@@ -5,10 +5,10 @@ set :application, "awsTest"
 set :repo_url, "git@github.com:praneenshakya/awsTest.git"
 
 # Default branch is :master
-# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/var/www/awsTest"
+set :deploy_to, "/home/ubuntu/app"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
@@ -37,3 +37,10 @@ set :deploy_to, "/var/www/awsTest"
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
+
+
+namespace :deploy do
+    after :updated, 'composer:vendor_copy'
+    after :updated, 'composer:install'
+    after :updated, 'laravel:set_permission'
+end
