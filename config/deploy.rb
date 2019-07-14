@@ -41,7 +41,14 @@ set :deploy_to, "/home/ubuntu/app"
 namespace :app do
     desc 'Set environment variables'
     task :set_variables do
-        
+        on roles(:app) do
+         puts '--> Copying environment configuration file'
+         execute "cp #{release_path}/.env.server #{release_path}/.env"
+         puts '--> Setting environment variables'
+         execute "sed --in-place -f #{fetch(:overlay_path)}/parameters.sed #{release_path}/.env"
+        end
+    end
+
 
 namespace :deploy do
     after :updated, 'composer:vendor_copy'
