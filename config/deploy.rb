@@ -38,6 +38,10 @@ set :deploy_to, "/home/ubuntu/app"
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
 
+namespace :app do
+    desc 'Set environment variables'
+    task :set_variables do
+        
 
 namespace :deploy do
     after :updated, 'composer:vendor_copy'

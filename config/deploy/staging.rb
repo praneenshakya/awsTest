@@ -59,3 +59,5 @@ server "13.211.171.135", user: "ubuntu", roles: %w{db}
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
+
+set :overlay_path, '/home/ubuntu/app/overlay'
