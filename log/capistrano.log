@@ -263,3 +263,905 @@
   INFO [60820d0f] Running /usr/bin/env echo "Branch develop (at e850ab8187ad4b29e672944e29ed7225de2f553c) deployed as release 20190714034224 by praneen" >> /home/ubuntu/app/revisions.log as ubuntu@13.211.171.135
  DEBUG [60820d0f] Command: cd /home/ubuntu/app/releases && /usr/bin/env echo "Branch develop (at e850ab8187ad4b29e672944e29ed7225de2f553c) deployed as release 20190714034224 by praneen" >> /home/ubuntu/app/revisions.log
   INFO [67aec3fe] Finished in 0.999 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-07-14 10:21:35 +0545 cap staging deploy branch=develop
+  INFO ---------------------------------------------------------------------------
+  INFO [ddce162f] Running /usr/bin/env mkdir -p /tmp as ubuntu@13.211.171.135
+ DEBUG [ddce162f] Command: /usr/bin/env mkdir -p /tmp
+  INFO [7a7a693f] Finished in 9.344 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-awsTest-staging-praneen.sh 0.0%
+  INFO Uploading /tmp/git-ssh-awsTest-staging-praneen.sh 100.0%
+  INFO [8f708917] Running /usr/bin/env chmod 700 /tmp/git-ssh-awsTest-staging-praneen.sh as ubuntu@13.211.171.135
+ DEBUG [8f708917] Command: /usr/bin/env chmod 700 /tmp/git-ssh-awsTest-staging-praneen.sh
+  INFO [ea9c1817] Finished in 2.129 seconds with exit status 0 (successful).
+  INFO [07cec471] Running /usr/bin/env git ls-remote git@github.com:praneenshakya/awsTest.git HEAD as ubuntu@13.211.171.135
+ DEBUG [07cec471] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git ls-remote git@github.com:praneenshakya/awsTest.git HEAD )
+ DEBUG [8c20c9bc] 	Warning: Permanently added the RSA host key for IP address '13.236.229.21' to the list of known hosts.
+ DEBUG [8c20c9bc] 	423072ca911863c8e3ae1ac6c295204275a84ba1	HEAD
+  INFO [8c20c9bc] Finished in 25.598 seconds with exit status 0 (successful).
+  INFO [bc3850b2] Running /usr/bin/env mkdir -p /home/ubuntu/app/shared /home/ubuntu/app/releases as ubuntu@13.211.171.135
+ DEBUG [bc3850b2] Command: /usr/bin/env mkdir -p /home/ubuntu/app/shared /home/ubuntu/app/releases
+  INFO [24dc9e3a] Finished in 0.715 seconds with exit status 0 (successful).
+ DEBUG [6990ebe1] Running [ -f /home/ubuntu/app/current/REVISION ] as ubuntu@13.211.171.135
+ DEBUG [6990ebe1] Command: [ -f /home/ubuntu/app/current/REVISION ]
+ DEBUG [627cc2bf] Finished in 9.568 seconds with exit status 0 (successful).
+ DEBUG [bb7bb928] Running /usr/bin/env cat /home/ubuntu/app/current/REVISION 2>/dev/null as ubuntu@13.211.171.135
+ DEBUG [bb7bb928] Command: /usr/bin/env cat /home/ubuntu/app/current/REVISION 2>/dev/null
+ DEBUG [19c46bee] 	e850ab8187ad4b29e672944e29ed7225de2f553c
+ DEBUG [19c46bee] Finished in 41.218 seconds with exit status 0 (successful).
+ DEBUG [e27d93d6] Running [ -f /home/ubuntu/app/repo/HEAD ] as ubuntu@13.211.171.135
+ DEBUG [e27d93d6] Command: [ -f /home/ubuntu/app/repo/HEAD ]
+ DEBUG [3c0f2270] Finished in 0.859 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/app/repo
+ DEBUG [4180bf52] Running if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [4180bf52] Command: if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi
+ DEBUG [11b94729] Finished in 8.492 seconds with exit status 0 (successful).
+  INFO [03762269] Running /usr/bin/env git remote set-url origin git@github.com:praneenshakya/awsTest.git as ubuntu@13.211.171.135
+ DEBUG [03762269] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git remote set-url origin git@github.com:praneenshakya/awsTest.git )
+  INFO [e797d75b] Finished in 1.636 seconds with exit status 0 (successful).
+  INFO [f752b4c7] Running /usr/bin/env git remote update --prune as ubuntu@13.211.171.135
+ DEBUG [f752b4c7] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [249f5052] 	Fetching origin
+ DEBUG [249f5052] 	Warning: Permanently added the RSA host key for IP address '52.64.108.95' to the list of known hosts.
+ DEBUG [249f5052] 	From github.com:praneenshakya/awsTest
+   e850ab8..423072c  develop    -> develop
+  INFO [249f5052] Finished in 5.629 seconds with exit status 0 (successful).
+ DEBUG [8cfbf902] Running if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [8cfbf902] Command: if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi
+ DEBUG [fe76a319] Finished in 0.916 seconds with exit status 0 (successful).
+  INFO [fa5842f6] Running /usr/bin/env mkdir -p /home/ubuntu/app/releases/20190714043812 as ubuntu@13.211.171.135
+ DEBUG [fa5842f6] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env mkdir -p /home/ubuntu/app/releases/20190714043812 )
+  INFO [667f739e] Finished in 0.918 seconds with exit status 0 (successful).
+  INFO [26e1c510] Running /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /home/ubuntu/app/releases/20190714043812 as ubuntu@13.211.171.135
+ DEBUG [26e1c510] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /home/ubuntu/app/releases/20190714043812 )
+  INFO [3c0e556a] Finished in 0.922 seconds with exit status 0 (successful).
+ DEBUG [bb38792a] Running if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [bb38792a] Command: if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi
+ DEBUG [df6004cd] Finished in 0.918 seconds with exit status 0 (successful).
+ DEBUG [e8f049e3] Running /usr/bin/env git rev-list --max-count=1 develop as ubuntu@13.211.171.135
+ DEBUG [e8f049e3] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git rev-list --max-count=1 develop )
+ DEBUG [03883760] 	423072ca911863c8e3ae1ac6c295204275a84ba1
+ DEBUG [03883760] Finished in 0.918 seconds with exit status 0 (successful).
+ DEBUG [f2e2bbf6] Running if test ! -d /home/ubuntu/app/releases/20190714043812; then echo "Directory does not exist '/home/ubuntu/app/releases/20190714043812'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [f2e2bbf6] Command: if test ! -d /home/ubuntu/app/releases/20190714043812; then echo "Directory does not exist '/home/ubuntu/app/releases/20190714043812'" 1>&2; false; fi
+ DEBUG [cd7c4e41] Finished in 0.924 seconds with exit status 0 (successful).
+  INFO [8d2a73e5] Running /usr/bin/env echo "423072ca911863c8e3ae1ac6c295204275a84ba1" > REVISION as ubuntu@13.211.171.135
+ DEBUG [8d2a73e5] Command: cd /home/ubuntu/app/releases/20190714043812 && /usr/bin/env echo "423072ca911863c8e3ae1ac6c295204275a84ba1" > REVISION
+  INFO [29bdf954] Finished in 0.916 seconds with exit status 0 (successful).
+  INFO [bf181555] Running /usr/bin/env ln -s /home/ubuntu/app/releases/20190714043812 /home/ubuntu/app/releases/current as ubuntu@13.211.171.135
+ DEBUG [bf181555] Command: /usr/bin/env ln -s /home/ubuntu/app/releases/20190714043812 /home/ubuntu/app/releases/current
+  INFO [d671a1b8] Finished in 0.912 seconds with exit status 0 (successful).
+  INFO [5ca4edca] Running /usr/bin/env mv /home/ubuntu/app/releases/current /home/ubuntu/app as ubuntu@13.211.171.135
+ DEBUG [5ca4edca] Command: /usr/bin/env mv /home/ubuntu/app/releases/current /home/ubuntu/app
+  INFO [933edd9e] Finished in 0.921 seconds with exit status 0 (successful).
+ DEBUG [190bc433] Running /usr/bin/env ls -x /home/ubuntu/app/releases as ubuntu@13.211.171.135
+ DEBUG [190bc433] Command: /usr/bin/env ls -x /home/ubuntu/app/releases
+ DEBUG [36560c8c] 	20190714034224	20190714043812
+ DEBUG [36560c8c] Finished in 0.917 seconds with exit status 0 (successful).
+ DEBUG [3ae24b46] Running if test ! -d /home/ubuntu/app/releases; then echo "Directory does not exist '/home/ubuntu/app/releases'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [3ae24b46] Command: if test ! -d /home/ubuntu/app/releases; then echo "Directory does not exist '/home/ubuntu/app/releases'" 1>&2; false; fi
+ DEBUG [deab8fe5] Finished in 0.917 seconds with exit status 0 (successful).
+  INFO [8e05aefd] Running /usr/bin/env echo "Branch develop (at 423072ca911863c8e3ae1ac6c295204275a84ba1) deployed as release 20190714043812 by praneen" >> /home/ubuntu/app/revisions.log as ubuntu@13.211.171.135
+ DEBUG [8e05aefd] Command: cd /home/ubuntu/app/releases && /usr/bin/env echo "Branch develop (at 423072ca911863c8e3ae1ac6c295204275a84ba1) deployed as release 20190714043812 by praneen" >> /home/ubuntu/app/revisions.log
+  INFO [f7118347] Finished in 0.921 seconds with exit status 0 (successful).
+  INFO [ce317f72] Running /usr/bin/env sudo systemctl reload nginx as ubuntu@13.211.171.135
+ DEBUG [ce317f72] Command: /usr/bin/env sudo systemctl reload nginx
+  INFO [bce7e802] Finished in 0.896 seconds with exit status 0 (successful).
+  INFO [6f4f0313] Running /usr/bin/env sudo systemctl reload php7.1-fpm as ubuntu@13.211.171.135
+ DEBUG [6f4f0313] Command: /usr/bin/env sudo systemctl reload php7.1-fpm
+ DEBUG [c6eb1929] 	Failed to reload php7.1-fpm.service: Unit php7.1-fpm.service not found.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-07-14 10:25:51 +0545 cap staging deploy branch=develop
+  INFO ---------------------------------------------------------------------------
+  INFO [5d059fd2] Running /usr/bin/env mkdir -p /tmp as ubuntu@13.211.171.135
+ DEBUG [5d059fd2] Command: /usr/bin/env mkdir -p /tmp
+  INFO [ad63e6db] Finished in 3.684 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-awsTest-staging-praneen.sh 0.0%
+  INFO Uploading /tmp/git-ssh-awsTest-staging-praneen.sh 100.0%
+  INFO [e77af0e6] Running /usr/bin/env chmod 700 /tmp/git-ssh-awsTest-staging-praneen.sh as ubuntu@13.211.171.135
+ DEBUG [e77af0e6] Command: /usr/bin/env chmod 700 /tmp/git-ssh-awsTest-staging-praneen.sh
+  INFO [6300bb3a] Finished in 0.923 seconds with exit status 0 (successful).
+  INFO [e632d353] Running /usr/bin/env git ls-remote git@github.com:praneenshakya/awsTest.git HEAD as ubuntu@13.211.171.135
+ DEBUG [e632d353] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git ls-remote git@github.com:praneenshakya/awsTest.git HEAD )
+ DEBUG [406d7853] 	423072ca911863c8e3ae1ac6c295204275a84ba1	HEAD
+  INFO [406d7853] Finished in 4.714 seconds with exit status 0 (successful).
+  INFO [5e17ab74] Running /usr/bin/env mkdir -p /home/ubuntu/app/shared /home/ubuntu/app/releases as ubuntu@13.211.171.135
+ DEBUG [5e17ab74] Command: /usr/bin/env mkdir -p /home/ubuntu/app/shared /home/ubuntu/app/releases
+  INFO [b593ef30] Finished in 0.912 seconds with exit status 0 (successful).
+ DEBUG [970afca4] Running [ -f /home/ubuntu/app/current/REVISION ] as ubuntu@13.211.171.135
+ DEBUG [970afca4] Command: [ -f /home/ubuntu/app/current/REVISION ]
+ DEBUG [de8b1dc0] Finished in 0.803 seconds with exit status 0 (successful).
+ DEBUG [13e929f0] Running /usr/bin/env cat /home/ubuntu/app/current/REVISION 2>/dev/null as ubuntu@13.211.171.135
+ DEBUG [13e929f0] Command: /usr/bin/env cat /home/ubuntu/app/current/REVISION 2>/dev/null
+ DEBUG [399ddcb4] 	423072ca911863c8e3ae1ac6c295204275a84ba1
+ DEBUG [399ddcb4] Finished in 0.934 seconds with exit status 0 (successful).
+ DEBUG [f97b5d6a] Running [ -f /home/ubuntu/app/repo/HEAD ] as ubuntu@13.211.171.135
+ DEBUG [f97b5d6a] Command: [ -f /home/ubuntu/app/repo/HEAD ]
+ DEBUG [47820616] Finished in 0.915 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/app/repo
+ DEBUG [a68ad520] Running if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [a68ad520] Command: if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi
+ DEBUG [e7945766] Finished in 0.912 seconds with exit status 0 (successful).
+  INFO [5ecf6c29] Running /usr/bin/env git remote set-url origin git@github.com:praneenshakya/awsTest.git as ubuntu@13.211.171.135
+ DEBUG [5ecf6c29] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git remote set-url origin git@github.com:praneenshakya/awsTest.git )
+  INFO [427c104f] Finished in 0.917 seconds with exit status 0 (successful).
+  INFO [226a073f] Running /usr/bin/env git remote update --prune as ubuntu@13.211.171.135
+ DEBUG [226a073f] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [ad622156] 	Fetching origin
+  INFO [ad622156] Finished in 4.199 seconds with exit status 0 (successful).
+ DEBUG [2a625b29] Running if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [2a625b29] Command: if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi
+ DEBUG [414da81f] Finished in 7.480 seconds with exit status 0 (successful).
+  INFO [d5b90a29] Running /usr/bin/env mkdir -p /home/ubuntu/app/releases/20190714044108 as ubuntu@13.211.171.135
+ DEBUG [d5b90a29] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env mkdir -p /home/ubuntu/app/releases/20190714044108 )
+  INFO [83da5a9d] Finished in 9.437 seconds with exit status 0 (successful).
+  INFO [d068777f] Running /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /home/ubuntu/app/releases/20190714044108 as ubuntu@13.211.171.135
+ DEBUG [d068777f] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /home/ubuntu/app/releases/20190714044108 )
+  INFO [b30cf319] Finished in 5.688 seconds with exit status 0 (successful).
+ DEBUG [ee658dae] Running if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [ee658dae] Command: if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi
+ DEBUG [956f665a] Finished in 6.723 seconds with exit status 0 (successful).
+ DEBUG [d2571cf7] Running /usr/bin/env git rev-list --max-count=1 develop as ubuntu@13.211.171.135
+ DEBUG [d2571cf7] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git rev-list --max-count=1 develop )
+ DEBUG [66600269] 	423072ca911863c8e3ae1ac6c295204275a84ba1
+ DEBUG [66600269] Finished in 3.565 seconds with exit status 0 (successful).
+ DEBUG [15e9405d] Running if test ! -d /home/ubuntu/app/releases/20190714044108; then echo "Directory does not exist '/home/ubuntu/app/releases/20190714044108'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [15e9405d] Command: if test ! -d /home/ubuntu/app/releases/20190714044108; then echo "Directory does not exist '/home/ubuntu/app/releases/20190714044108'" 1>&2; false; fi
+ DEBUG [c55ccdd0] Finished in 8.858 seconds with exit status 0 (successful).
+  INFO [39eb39b8] Running /usr/bin/env echo "423072ca911863c8e3ae1ac6c295204275a84ba1" > REVISION as ubuntu@13.211.171.135
+ DEBUG [39eb39b8] Command: cd /home/ubuntu/app/releases/20190714044108 && /usr/bin/env echo "423072ca911863c8e3ae1ac6c295204275a84ba1" > REVISION
+  INFO [d085d76e] Finished in 9.653 seconds with exit status 0 (successful).
+  INFO [23750365] Running /usr/bin/env ln -s /home/ubuntu/app/releases/20190714044108 /home/ubuntu/app/releases/current as ubuntu@13.211.171.135
+ DEBUG [23750365] Command: /usr/bin/env ln -s /home/ubuntu/app/releases/20190714044108 /home/ubuntu/app/releases/current
+  INFO [e043afb9] Finished in 16.675 seconds with exit status 0 (successful).
+  INFO [74bfc123] Running /usr/bin/env mv /home/ubuntu/app/releases/current /home/ubuntu/app as ubuntu@13.211.171.135
+ DEBUG [74bfc123] Command: /usr/bin/env mv /home/ubuntu/app/releases/current /home/ubuntu/app
+  INFO [d073de53] Finished in 5.427 seconds with exit status 0 (successful).
+ DEBUG [f13ce550] Running /usr/bin/env ls -x /home/ubuntu/app/releases as ubuntu@13.211.171.135
+ DEBUG [f13ce550] Command: /usr/bin/env ls -x /home/ubuntu/app/releases
+ DEBUG [be9860b8] 	20190714034224	20190714043812	20190714044108
+ DEBUG [be9860b8] Finished in 1.207 seconds with exit status 0 (successful).
+ DEBUG [2d1e85b9] Running if test ! -d /home/ubuntu/app/releases; then echo "Directory does not exist '/home/ubuntu/app/releases'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [2d1e85b9] Command: if test ! -d /home/ubuntu/app/releases; then echo "Directory does not exist '/home/ubuntu/app/releases'" 1>&2; false; fi
+ DEBUG [0e115fc0] Finished in 5.426 seconds with exit status 0 (successful).
+  INFO [8a4925e9] Running /usr/bin/env echo "Branch develop (at 423072ca911863c8e3ae1ac6c295204275a84ba1) deployed as release 20190714044108 by praneen" >> /home/ubuntu/app/revisions.log as ubuntu@13.211.171.135
+ DEBUG [8a4925e9] Command: cd /home/ubuntu/app/releases && /usr/bin/env echo "Branch develop (at 423072ca911863c8e3ae1ac6c295204275a84ba1) deployed as release 20190714044108 by praneen" >> /home/ubuntu/app/revisions.log
+  INFO [0ac2dc25] Finished in 0.920 seconds with exit status 0 (successful).
+  INFO [0d7dd404] Running /usr/bin/env sudo systemctl reload nginx as ubuntu@13.211.171.135
+ DEBUG [0d7dd404] Command: /usr/bin/env sudo systemctl reload nginx
+  INFO [fecc2cc0] Finished in 0.873 seconds with exit status 0 (successful).
+  INFO [235e514f] Running /usr/bin/env sudo systemctl reload php7.2-fpm as ubuntu@13.211.171.135
+ DEBUG [235e514f] Command: /usr/bin/env sudo systemctl reload php7.2-fpm
+  INFO [42e56273] Finished in 0.966 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-07-14 10:52:37 +0545 cap staging composer:install
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-07-14 10:55:03 +0545 cap staging rake:invoke task=install
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-07-15 09:37:11 +0545 cap staging deploy branch=develop
+  INFO ---------------------------------------------------------------------------
+  INFO [147a7f7a] Running /usr/bin/env mkdir -p /tmp as ubuntu@13.211.171.135
+ DEBUG [147a7f7a] Command: /usr/bin/env mkdir -p /tmp
+  INFO [dea69219] Finished in 4.633 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-awsTest-staging-praneen.sh 0.0%
+  INFO Uploading /tmp/git-ssh-awsTest-staging-praneen.sh 100.0%
+  INFO [ffce8fc3] Running /usr/bin/env chmod 700 /tmp/git-ssh-awsTest-staging-praneen.sh as ubuntu@13.211.171.135
+ DEBUG [ffce8fc3] Command: /usr/bin/env chmod 700 /tmp/git-ssh-awsTest-staging-praneen.sh
+  INFO [1b7f7fcb] Finished in 0.843 seconds with exit status 0 (successful).
+  INFO [7e73ad10] Running /usr/bin/env git ls-remote git@github.com:praneenshakya/awsTest.git HEAD as ubuntu@13.211.171.135
+ DEBUG [7e73ad10] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git ls-remote git@github.com:praneenshakya/awsTest.git HEAD )
+ DEBUG [01046c19] 	423072ca911863c8e3ae1ac6c295204275a84ba1	HEAD
+  INFO [01046c19] Finished in 3.801 seconds with exit status 0 (successful).
+  INFO [9b55abbc] Running /usr/bin/env mkdir -p /home/ubuntu/app/shared /home/ubuntu/app/releases as ubuntu@13.211.171.135
+ DEBUG [9b55abbc] Command: /usr/bin/env mkdir -p /home/ubuntu/app/shared /home/ubuntu/app/releases
+  INFO [f4ce789f] Finished in 0.690 seconds with exit status 0 (successful).
+  INFO [b35f9bae] Running /usr/bin/env mkdir -p /home/ubuntu/app/shared/storage/app /home/ubuntu/app/shared/storage/framework/cache /home/ubuntu/app/shared/storage/framework/sessions /home/ubuntu/app/shared/storage/framework/views /home/ubuntu/app/shared/storage/framework/testing /home/ubuntu/app/shared/storage/logs as ubuntu@13.211.171.135
+ DEBUG [b35f9bae] Command: /usr/bin/env mkdir -p /home/ubuntu/app/shared/storage/app /home/ubuntu/app/shared/storage/framework/cache /home/ubuntu/app/shared/storage/framework/sessions /home/ubuntu/app/shared/storage/framework/views /home/ubuntu/app/shared/storage/framework/testing /home/ubuntu/app/shared/storage/logs
+  INFO [33c7d3ac] Finished in 0.731 seconds with exit status 0 (successful).
+ DEBUG [7932885b] Running [ -f /home/ubuntu/app/current/REVISION ] as ubuntu@13.211.171.135
+ DEBUG [7932885b] Command: [ -f /home/ubuntu/app/current/REVISION ]
+ DEBUG [7cd9f2ac] Finished in 0.747 seconds with exit status 0 (successful).
+ DEBUG [8e092166] Running /usr/bin/env cat /home/ubuntu/app/current/REVISION 2>/dev/null as ubuntu@13.211.171.135
+ DEBUG [8e092166] Command: /usr/bin/env cat /home/ubuntu/app/current/REVISION 2>/dev/null
+ DEBUG [d3a9be87] 	423072ca911863c8e3ae1ac6c295204275a84ba1
+ DEBUG [d3a9be87] Finished in 0.741 seconds with exit status 0 (successful).
+ DEBUG [7d6d5bb2] Running [ -f /home/ubuntu/app/repo/HEAD ] as ubuntu@13.211.171.135
+ DEBUG [7d6d5bb2] Command: [ -f /home/ubuntu/app/repo/HEAD ]
+ DEBUG [d70ba4d9] Finished in 1.303 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/app/repo
+ DEBUG [58559f68] Running if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [58559f68] Command: if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi
+ DEBUG [d7bd127c] Finished in 0.967 seconds with exit status 0 (successful).
+  INFO [ce2619bb] Running /usr/bin/env git remote set-url origin git@github.com:praneenshakya/awsTest.git as ubuntu@13.211.171.135
+ DEBUG [ce2619bb] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git remote set-url origin git@github.com:praneenshakya/awsTest.git )
+  INFO [5c625381] Finished in 0.968 seconds with exit status 0 (successful).
+  INFO [eaa1f6f2] Running /usr/bin/env git remote update --prune as ubuntu@13.211.171.135
+ DEBUG [eaa1f6f2] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [8d39a4e0] 	Fetching origin
+  INFO [8d39a4e0] Finished in 3.791 seconds with exit status 0 (successful).
+ DEBUG [62f1634b] Running if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [62f1634b] Command: if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi
+ DEBUG [ed0ab78e] Finished in 0.919 seconds with exit status 0 (successful).
+  INFO [ef723e46] Running /usr/bin/env mkdir -p /home/ubuntu/app/releases/20190715035231 as ubuntu@13.211.171.135
+ DEBUG [ef723e46] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env mkdir -p /home/ubuntu/app/releases/20190715035231 )
+  INFO [2199b38d] Finished in 0.817 seconds with exit status 0 (successful).
+  INFO [99585b31] Running /usr/bin/env git archive \ | /usr/bin/env tar -x -f - -C /home/ubuntu/app/releases/20190715035231 as ubuntu@13.211.171.135
+ DEBUG [99585b31] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git archive \ | /usr/bin/env tar -x -f - -C /home/ubuntu/app/releases/20190715035231 )
+ DEBUG [ea25e43a] 	fatal: Not a valid object name
+ DEBUG [ea25e43a] 	tar: 
+ DEBUG [ea25e43a] 	This does not look like a tar archive
+ DEBUG [ea25e43a] 	
+ DEBUG [ea25e43a] 	tar: 
+ DEBUG [ea25e43a] 	Exiting with failure status due to previous errors
+ DEBUG [ea25e43a] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-07-15 09:38:41 +0545 cap staging deploy branch=develop
+  INFO ---------------------------------------------------------------------------
+  INFO [09be139c] Running /usr/bin/env mkdir -p /tmp as ubuntu@13.211.171.135
+ DEBUG [09be139c] Command: /usr/bin/env mkdir -p /tmp
+  INFO [d530e62f] Finished in 4.471 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-awsTest-staging-praneen.sh 0.0%
+  INFO Uploading /tmp/git-ssh-awsTest-staging-praneen.sh 100.0%
+  INFO [360aca9a] Running /usr/bin/env chmod 700 /tmp/git-ssh-awsTest-staging-praneen.sh as ubuntu@13.211.171.135
+ DEBUG [360aca9a] Command: /usr/bin/env chmod 700 /tmp/git-ssh-awsTest-staging-praneen.sh
+  INFO [5fb55fdd] Finished in 0.995 seconds with exit status 0 (successful).
+  INFO [5899a6a7] Running /usr/bin/env git ls-remote git@github.com:praneenshakya/awsTest.git HEAD as ubuntu@13.211.171.135
+ DEBUG [5899a6a7] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git ls-remote git@github.com:praneenshakya/awsTest.git HEAD )
+ DEBUG [a6536788] 	423072ca911863c8e3ae1ac6c295204275a84ba1	HEAD
+  INFO [a6536788] Finished in 4.459 seconds with exit status 0 (successful).
+  INFO [74722d94] Running /usr/bin/env mkdir -p /home/ubuntu/app/shared /home/ubuntu/app/releases as ubuntu@13.211.171.135
+ DEBUG [74722d94] Command: /usr/bin/env mkdir -p /home/ubuntu/app/shared /home/ubuntu/app/releases
+  INFO [1aa700ae] Finished in 1.636 seconds with exit status 0 (successful).
+  INFO [0432de9a] Running /usr/bin/env mkdir -p /home/ubuntu/app/shared/storage/app /home/ubuntu/app/shared/storage/framework/cache /home/ubuntu/app/shared/storage/framework/sessions /home/ubuntu/app/shared/storage/framework/views /home/ubuntu/app/shared/storage/framework/testing /home/ubuntu/app/shared/storage/logs as ubuntu@13.211.171.135
+ DEBUG [0432de9a] Command: /usr/bin/env mkdir -p /home/ubuntu/app/shared/storage/app /home/ubuntu/app/shared/storage/framework/cache /home/ubuntu/app/shared/storage/framework/sessions /home/ubuntu/app/shared/storage/framework/views /home/ubuntu/app/shared/storage/framework/testing /home/ubuntu/app/shared/storage/logs
+  INFO [8e0d9e9a] Finished in 1.220 seconds with exit status 0 (successful).
+ DEBUG [d0999005] Running [ -f /home/ubuntu/app/current/REVISION ] as ubuntu@13.211.171.135
+ DEBUG [d0999005] Command: [ -f /home/ubuntu/app/current/REVISION ]
+ DEBUG [15f8b704] Finished in 1.431 seconds with exit status 0 (successful).
+ DEBUG [7da77f77] Running /usr/bin/env cat /home/ubuntu/app/current/REVISION 2>/dev/null as ubuntu@13.211.171.135
+ DEBUG [7da77f77] Command: /usr/bin/env cat /home/ubuntu/app/current/REVISION 2>/dev/null
+ DEBUG [429de011] 	423072ca911863c8e3ae1ac6c295204275a84ba1
+ DEBUG [429de011] Finished in 1.228 seconds with exit status 0 (successful).
+ DEBUG [d6418756] Running [ -f /home/ubuntu/app/repo/HEAD ] as ubuntu@13.211.171.135
+ DEBUG [d6418756] Command: [ -f /home/ubuntu/app/repo/HEAD ]
+ DEBUG [b1e4b67e] Finished in 0.917 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/app/repo
+ DEBUG [fd63676a] Running if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [fd63676a] Command: if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi
+ DEBUG [5fbe866a] Finished in 0.813 seconds with exit status 0 (successful).
+  INFO [bffb9a22] Running /usr/bin/env git remote set-url origin git@github.com:praneenshakya/awsTest.git as ubuntu@13.211.171.135
+ DEBUG [bffb9a22] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git remote set-url origin git@github.com:praneenshakya/awsTest.git )
+  INFO [c566c351] Finished in 0.923 seconds with exit status 0 (successful).
+  INFO [7a959bbd] Running /usr/bin/env git remote update --prune as ubuntu@13.211.171.135
+ DEBUG [7a959bbd] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [3b48eeaa] 	Fetching origin
+  INFO [3b48eeaa] Finished in 6.756 seconds with exit status 0 (successful).
+ DEBUG [ccf7ba69] Running if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [ccf7ba69] Command: if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi
+ DEBUG [ab957457] Finished in 1.737 seconds with exit status 0 (successful).
+  INFO [6501c203] Running /usr/bin/env mkdir -p /home/ubuntu/app/releases/20190715035359 as ubuntu@13.211.171.135
+ DEBUG [6501c203] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env mkdir -p /home/ubuntu/app/releases/20190715035359 )
+  INFO [c0b63efb] Finished in 0.818 seconds with exit status 0 (successful).
+  INFO [773be689] Running /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /home/ubuntu/app/releases/20190715035359 as ubuntu@13.211.171.135
+ DEBUG [773be689] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /home/ubuntu/app/releases/20190715035359 )
+  INFO [f23aa272] Finished in 1.021 seconds with exit status 0 (successful).
+ DEBUG [e452f108] Running if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [e452f108] Command: if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi
+ DEBUG [06840231] Finished in 0.735 seconds with exit status 0 (successful).
+ DEBUG [4dac893e] Running /usr/bin/env git rev-list --max-count=1 develop as ubuntu@13.211.171.135
+ DEBUG [4dac893e] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git rev-list --max-count=1 develop )
+ DEBUG [5d5a4e5d] 	423072ca911863c8e3ae1ac6c295204275a84ba1
+ DEBUG [5d5a4e5d] Finished in 0.901 seconds with exit status 0 (successful).
+ DEBUG [3920fa4f] Running if test ! -d /home/ubuntu/app/releases/20190715035359; then echo "Directory does not exist '/home/ubuntu/app/releases/20190715035359'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [3920fa4f] Command: if test ! -d /home/ubuntu/app/releases/20190715035359; then echo "Directory does not exist '/home/ubuntu/app/releases/20190715035359'" 1>&2; false; fi
+ DEBUG [e66a608c] Finished in 0.844 seconds with exit status 0 (successful).
+  INFO [438ccc03] Running /usr/bin/env echo "423072ca911863c8e3ae1ac6c295204275a84ba1" > REVISION as ubuntu@13.211.171.135
+ DEBUG [438ccc03] Command: cd /home/ubuntu/app/releases/20190715035359 && /usr/bin/env echo "423072ca911863c8e3ae1ac6c295204275a84ba1" > REVISION
+  INFO [066c1819] Finished in 0.999 seconds with exit status 0 (successful).
+  INFO [f321273c] Running /usr/bin/env mkdir -p /home/ubuntu/app/releases/20190715035359/storage /home/ubuntu/app/releases/20190715035359/storage/framework as ubuntu@13.211.171.135
+ DEBUG [f321273c] Command: /usr/bin/env mkdir -p /home/ubuntu/app/releases/20190715035359/storage /home/ubuntu/app/releases/20190715035359/storage/framework
+  INFO [6a6771a5] Finished in 0.913 seconds with exit status 0 (successful).
+ DEBUG [63b828bf] Running [ -L /home/ubuntu/app/releases/20190715035359/storage/app ] as ubuntu@13.211.171.135
+ DEBUG [63b828bf] Command: [ -L /home/ubuntu/app/releases/20190715035359/storage/app ]
+ DEBUG [ed976486] Finished in 0.920 seconds with exit status 1 (failed).
+ DEBUG [94b0bf5b] Running [ -d /home/ubuntu/app/releases/20190715035359/storage/app ] as ubuntu@13.211.171.135
+ DEBUG [94b0bf5b] Command: [ -d /home/ubuntu/app/releases/20190715035359/storage/app ]
+ DEBUG [fddd88cf] Finished in 0.921 seconds with exit status 0 (successful).
+  INFO [787be122] Running /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715035359/storage/app as ubuntu@13.211.171.135
+ DEBUG [787be122] Command: /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715035359/storage/app
+  INFO [56137bc1] Finished in 0.880 seconds with exit status 0 (successful).
+  INFO [044e5ece] Running /usr/bin/env ln -s /home/ubuntu/app/shared/storage/app /home/ubuntu/app/releases/20190715035359/storage/app as ubuntu@13.211.171.135
+ DEBUG [044e5ece] Command: /usr/bin/env ln -s /home/ubuntu/app/shared/storage/app /home/ubuntu/app/releases/20190715035359/storage/app
+  INFO [207a62ee] Finished in 1.375 seconds with exit status 0 (successful).
+ DEBUG [2efa49c8] Running [ -L /home/ubuntu/app/releases/20190715035359/storage/framework/cache ] as ubuntu@13.211.171.135
+ DEBUG [2efa49c8] Command: [ -L /home/ubuntu/app/releases/20190715035359/storage/framework/cache ]
+ DEBUG [56881873] Finished in 1.220 seconds with exit status 1 (failed).
+ DEBUG [460e27c6] Running [ -d /home/ubuntu/app/releases/20190715035359/storage/framework/cache ] as ubuntu@13.211.171.135
+ DEBUG [460e27c6] Command: [ -d /home/ubuntu/app/releases/20190715035359/storage/framework/cache ]
+ DEBUG [fde87f69] Finished in 0.922 seconds with exit status 0 (successful).
+  INFO [bf6146dc] Running /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715035359/storage/framework/cache as ubuntu@13.211.171.135
+ DEBUG [bf6146dc] Command: /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715035359/storage/framework/cache
+  INFO [4305db39] Finished in 1.433 seconds with exit status 0 (successful).
+  INFO [f91b9829] Running /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/cache /home/ubuntu/app/releases/20190715035359/storage/framework/cache as ubuntu@13.211.171.135
+ DEBUG [f91b9829] Command: /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/cache /home/ubuntu/app/releases/20190715035359/storage/framework/cache
+  INFO [0c2a9583] Finished in 1.122 seconds with exit status 0 (successful).
+ DEBUG [e824d4f1] Running [ -L /home/ubuntu/app/releases/20190715035359/storage/framework/sessions ] as ubuntu@13.211.171.135
+ DEBUG [e824d4f1] Command: [ -L /home/ubuntu/app/releases/20190715035359/storage/framework/sessions ]
+ DEBUG [dbeb75e1] Finished in 0.920 seconds with exit status 1 (failed).
+ DEBUG [1d92c581] Running [ -d /home/ubuntu/app/releases/20190715035359/storage/framework/sessions ] as ubuntu@13.211.171.135
+ DEBUG [1d92c581] Command: [ -d /home/ubuntu/app/releases/20190715035359/storage/framework/sessions ]
+ DEBUG [8fa5c0f2] Finished in 0.921 seconds with exit status 0 (successful).
+  INFO [b75d27d3] Running /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715035359/storage/framework/sessions as ubuntu@13.211.171.135
+ DEBUG [b75d27d3] Command: /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715035359/storage/framework/sessions
+  INFO [c51c89e5] Finished in 1.437 seconds with exit status 0 (successful).
+  INFO [037c2231] Running /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/sessions /home/ubuntu/app/releases/20190715035359/storage/framework/sessions as ubuntu@13.211.171.135
+ DEBUG [037c2231] Command: /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/sessions /home/ubuntu/app/releases/20190715035359/storage/framework/sessions
+  INFO [cd4ed1f7] Finished in 1.225 seconds with exit status 0 (successful).
+ DEBUG [b5bbbb78] Running [ -L /home/ubuntu/app/releases/20190715035359/storage/framework/views ] as ubuntu@13.211.171.135
+ DEBUG [b5bbbb78] Command: [ -L /home/ubuntu/app/releases/20190715035359/storage/framework/views ]
+ DEBUG [3be81b13] Finished in 0.796 seconds with exit status 1 (failed).
+ DEBUG [757a80e7] Running [ -d /home/ubuntu/app/releases/20190715035359/storage/framework/views ] as ubuntu@13.211.171.135
+ DEBUG [757a80e7] Command: [ -d /home/ubuntu/app/releases/20190715035359/storage/framework/views ]
+ DEBUG [a495755d] Finished in 0.938 seconds with exit status 0 (successful).
+  INFO [8876290f] Running /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715035359/storage/framework/views as ubuntu@13.211.171.135
+ DEBUG [8876290f] Command: /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715035359/storage/framework/views
+  INFO [78b930e9] Finished in 0.920 seconds with exit status 0 (successful).
+  INFO [c7be3b4c] Running /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/views /home/ubuntu/app/releases/20190715035359/storage/framework/views as ubuntu@13.211.171.135
+ DEBUG [c7be3b4c] Command: /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/views /home/ubuntu/app/releases/20190715035359/storage/framework/views
+  INFO [2f148343] Finished in 0.817 seconds with exit status 0 (successful).
+ DEBUG [2cd69de2] Running [ -L /home/ubuntu/app/releases/20190715035359/storage/framework/testing ] as ubuntu@13.211.171.135
+ DEBUG [2cd69de2] Command: [ -L /home/ubuntu/app/releases/20190715035359/storage/framework/testing ]
+ DEBUG [95857fd0] Finished in 0.817 seconds with exit status 1 (failed).
+ DEBUG [edb753e4] Running [ -d /home/ubuntu/app/releases/20190715035359/storage/framework/testing ] as ubuntu@13.211.171.135
+ DEBUG [edb753e4] Command: [ -d /home/ubuntu/app/releases/20190715035359/storage/framework/testing ]
+ DEBUG [13754e2b] Finished in 1.432 seconds with exit status 0 (successful).
+  INFO [b8265d66] Running /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715035359/storage/framework/testing as ubuntu@13.211.171.135
+ DEBUG [b8265d66] Command: /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715035359/storage/framework/testing
+  INFO [ca4be944] Finished in 1.022 seconds with exit status 0 (successful).
+  INFO [1d8ef58d] Running /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/testing /home/ubuntu/app/releases/20190715035359/storage/framework/testing as ubuntu@13.211.171.135
+ DEBUG [1d8ef58d] Command: /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/testing /home/ubuntu/app/releases/20190715035359/storage/framework/testing
+  INFO [ebb7caee] Finished in 0.814 seconds with exit status 0 (successful).
+ DEBUG [b66f91de] Running [ -L /home/ubuntu/app/releases/20190715035359/storage/logs ] as ubuntu@13.211.171.135
+ DEBUG [b66f91de] Command: [ -L /home/ubuntu/app/releases/20190715035359/storage/logs ]
+ DEBUG [54b27ad5] Finished in 0.908 seconds with exit status 1 (failed).
+ DEBUG [7d4b2966] Running [ -d /home/ubuntu/app/releases/20190715035359/storage/logs ] as ubuntu@13.211.171.135
+ DEBUG [7d4b2966] Command: [ -d /home/ubuntu/app/releases/20190715035359/storage/logs ]
+ DEBUG [405d410b] Finished in 0.790 seconds with exit status 0 (successful).
+  INFO [bd4518d5] Running /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715035359/storage/logs as ubuntu@13.211.171.135
+ DEBUG [bd4518d5] Command: /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715035359/storage/logs
+  INFO [fd40962f] Finished in 0.958 seconds with exit status 0 (successful).
+  INFO [37085d7c] Running /usr/bin/env ln -s /home/ubuntu/app/shared/storage/logs /home/ubuntu/app/releases/20190715035359/storage/logs as ubuntu@13.211.171.135
+ DEBUG [37085d7c] Command: /usr/bin/env ln -s /home/ubuntu/app/shared/storage/logs /home/ubuntu/app/releases/20190715035359/storage/logs
+  INFO [f00e7eac] Finished in 1.340 seconds with exit status 0 (successful).
+  INFO [76b428da] Running vendorDir=/home/ubuntu/app/current/vendor; if [ -d $vendorDir ] || [ -h $vendorDir ]; then cp -a $vendorDir /home/ubuntu/app/releases/20190715035359/vendor; fi; as ubuntu@13.211.171.135
+ DEBUG [76b428da] Command: vendorDir=/home/ubuntu/app/current/vendor; if [ -d $vendorDir ] || [ -h $vendorDir ]; then cp -a $vendorDir /home/ubuntu/app/releases/20190715035359/vendor; fi;
+  INFO [0757da9d] Finished in 1.213 seconds with exit status 0 (successful).
+ DEBUG [53ffbd35] Running if test ! -d /home/ubuntu/app/releases/20190715035359; then echo "Directory does not exist '/home/ubuntu/app/releases/20190715035359'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [53ffbd35] Command: if test ! -d /home/ubuntu/app/releases/20190715035359; then echo "Directory does not exist '/home/ubuntu/app/releases/20190715035359'" 1>&2; false; fi
+ DEBUG [68848c86] Finished in 0.903 seconds with exit status 0 (successful).
+  INFO [6cbc8637] Running /usr/bin/env composer install --no-dev --quiet --prefer-dist --optimize-autoloader as ubuntu@13.211.171.135
+ DEBUG [6cbc8637] Command: cd /home/ubuntu/app/releases/20190715035359 && /usr/bin/env composer install --no-dev --quiet --prefer-dist --optimize-autoloader
+ DEBUG [33e50eac] 	/usr/bin/env: 
+ DEBUG [33e50eac] 	‘composer’
+ DEBUG [33e50eac] 	: No such file or directory
+ DEBUG [33e50eac] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-07-15 09:46:18 +0545 cap staging deploy branch=develop
+  INFO ---------------------------------------------------------------------------
+  INFO [7ecb57d9] Running /usr/bin/env mkdir -p /tmp as ubuntu@13.211.171.135
+ DEBUG [7ecb57d9] Command: /usr/bin/env mkdir -p /tmp
+  INFO [dc132bd2] Finished in 3.820 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-awsTest-staging-praneen.sh 0.0%
+  INFO Uploading /tmp/git-ssh-awsTest-staging-praneen.sh 100.0%
+  INFO [0c03f0d7] Running /usr/bin/env chmod 700 /tmp/git-ssh-awsTest-staging-praneen.sh as ubuntu@13.211.171.135
+ DEBUG [0c03f0d7] Command: /usr/bin/env chmod 700 /tmp/git-ssh-awsTest-staging-praneen.sh
+  INFO [48c6419a] Finished in 0.923 seconds with exit status 0 (successful).
+  INFO [30a8b78b] Running /usr/bin/env git ls-remote git@github.com:praneenshakya/awsTest.git HEAD as ubuntu@13.211.171.135
+ DEBUG [30a8b78b] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git ls-remote git@github.com:praneenshakya/awsTest.git HEAD )
+ DEBUG [32e736cf] 	423072ca911863c8e3ae1ac6c295204275a84ba1	HEAD
+  INFO [32e736cf] Finished in 3.615 seconds with exit status 0 (successful).
+  INFO [5ca621fe] Running /usr/bin/env mkdir -p /home/ubuntu/app/shared /home/ubuntu/app/releases as ubuntu@13.211.171.135
+ DEBUG [5ca621fe] Command: /usr/bin/env mkdir -p /home/ubuntu/app/shared /home/ubuntu/app/releases
+  INFO [302bd251] Finished in 0.694 seconds with exit status 0 (successful).
+  INFO [6572663c] Running /usr/bin/env mkdir -p /home/ubuntu/app/shared/storage/app /home/ubuntu/app/shared/storage/framework/cache /home/ubuntu/app/shared/storage/framework/sessions /home/ubuntu/app/shared/storage/framework/views /home/ubuntu/app/shared/storage/framework/testing /home/ubuntu/app/shared/storage/logs as ubuntu@13.211.171.135
+ DEBUG [6572663c] Command: /usr/bin/env mkdir -p /home/ubuntu/app/shared/storage/app /home/ubuntu/app/shared/storage/framework/cache /home/ubuntu/app/shared/storage/framework/sessions /home/ubuntu/app/shared/storage/framework/views /home/ubuntu/app/shared/storage/framework/testing /home/ubuntu/app/shared/storage/logs
+  INFO [d984ae28] Finished in 0.817 seconds with exit status 0 (successful).
+ DEBUG [af808846] Running [ -f /home/ubuntu/app/current/REVISION ] as ubuntu@13.211.171.135
+ DEBUG [af808846] Command: [ -f /home/ubuntu/app/current/REVISION ]
+ DEBUG [68051232] Finished in 0.764 seconds with exit status 0 (successful).
+ DEBUG [01a6297b] Running /usr/bin/env cat /home/ubuntu/app/current/REVISION 2>/dev/null as ubuntu@13.211.171.135
+ DEBUG [01a6297b] Command: /usr/bin/env cat /home/ubuntu/app/current/REVISION 2>/dev/null
+ DEBUG [b99b5301] 	423072ca911863c8e3ae1ac6c295204275a84ba1
+ DEBUG [b99b5301] Finished in 0.733 seconds with exit status 0 (successful).
+ DEBUG [85739e4d] Running [ -f /home/ubuntu/app/repo/HEAD ] as ubuntu@13.211.171.135
+ DEBUG [85739e4d] Command: [ -f /home/ubuntu/app/repo/HEAD ]
+ DEBUG [2220e40b] Finished in 0.735 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/app/repo
+ DEBUG [5c509565] Running if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [5c509565] Command: if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi
+ DEBUG [91798558] Finished in 0.755 seconds with exit status 0 (successful).
+  INFO [4cccdd1b] Running /usr/bin/env git remote set-url origin git@github.com:praneenshakya/awsTest.git as ubuntu@13.211.171.135
+ DEBUG [4cccdd1b] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git remote set-url origin git@github.com:praneenshakya/awsTest.git )
+  INFO [3a10a6fc] Finished in 0.895 seconds with exit status 0 (successful).
+  INFO [89d998f2] Running /usr/bin/env git remote update --prune as ubuntu@13.211.171.135
+ DEBUG [89d998f2] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [015e12fe] 	Fetching origin
+  INFO [015e12fe] Finished in 3.893 seconds with exit status 0 (successful).
+ DEBUG [bf33d98e] Running if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [bf33d98e] Command: if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi
+ DEBUG [f494e478] Finished in 0.919 seconds with exit status 0 (successful).
+  INFO [95f062b2] Running /usr/bin/env mkdir -p /home/ubuntu/app/releases/20190715040135 as ubuntu@13.211.171.135
+ DEBUG [95f062b2] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env mkdir -p /home/ubuntu/app/releases/20190715040135 )
+  INFO [f5dd9ee6] Finished in 0.815 seconds with exit status 0 (successful).
+  INFO [020cdcfb] Running /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /home/ubuntu/app/releases/20190715040135 as ubuntu@13.211.171.135
+ DEBUG [020cdcfb] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /home/ubuntu/app/releases/20190715040135 )
+  INFO [110a416a] Finished in 0.922 seconds with exit status 0 (successful).
+ DEBUG [014fa305] Running if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [014fa305] Command: if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi
+ DEBUG [15089ef3] Finished in 0.740 seconds with exit status 0 (successful).
+ DEBUG [bbf2b1e6] Running /usr/bin/env git rev-list --max-count=1 develop as ubuntu@13.211.171.135
+ DEBUG [bbf2b1e6] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git rev-list --max-count=1 develop )
+ DEBUG [f6b0a95b] 	423072ca911863c8e3ae1ac6c295204275a84ba1
+ DEBUG [f6b0a95b] Finished in 0.737 seconds with exit status 0 (successful).
+ DEBUG [cd7a54d9] Running if test ! -d /home/ubuntu/app/releases/20190715040135; then echo "Directory does not exist '/home/ubuntu/app/releases/20190715040135'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [cd7a54d9] Command: if test ! -d /home/ubuntu/app/releases/20190715040135; then echo "Directory does not exist '/home/ubuntu/app/releases/20190715040135'" 1>&2; false; fi
+ DEBUG [7c412355] Finished in 0.731 seconds with exit status 0 (successful).
+  INFO [ba6c4840] Running /usr/bin/env echo "423072ca911863c8e3ae1ac6c295204275a84ba1" > REVISION as ubuntu@13.211.171.135
+ DEBUG [ba6c4840] Command: cd /home/ubuntu/app/releases/20190715040135 && /usr/bin/env echo "423072ca911863c8e3ae1ac6c295204275a84ba1" > REVISION
+  INFO [a71231a2] Finished in 0.734 seconds with exit status 0 (successful).
+  INFO [18d99f73] Running /usr/bin/env mkdir -p /home/ubuntu/app/releases/20190715040135/storage /home/ubuntu/app/releases/20190715040135/storage/framework as ubuntu@13.211.171.135
+ DEBUG [18d99f73] Command: /usr/bin/env mkdir -p /home/ubuntu/app/releases/20190715040135/storage /home/ubuntu/app/releases/20190715040135/storage/framework
+  INFO [1b1968ad] Finished in 0.732 seconds with exit status 0 (successful).
+ DEBUG [de5ff18b] Running [ -L /home/ubuntu/app/releases/20190715040135/storage/app ] as ubuntu@13.211.171.135
+ DEBUG [de5ff18b] Command: [ -L /home/ubuntu/app/releases/20190715040135/storage/app ]
+ DEBUG [732400ea] Finished in 0.732 seconds with exit status 1 (failed).
+ DEBUG [326c1020] Running [ -d /home/ubuntu/app/releases/20190715040135/storage/app ] as ubuntu@13.211.171.135
+ DEBUG [326c1020] Command: [ -d /home/ubuntu/app/releases/20190715040135/storage/app ]
+ DEBUG [16adef01] Finished in 0.731 seconds with exit status 0 (successful).
+  INFO [45a47f0a] Running /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040135/storage/app as ubuntu@13.211.171.135
+ DEBUG [45a47f0a] Command: /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040135/storage/app
+  INFO [a57e1f33] Finished in 0.735 seconds with exit status 0 (successful).
+  INFO [be7ed674] Running /usr/bin/env ln -s /home/ubuntu/app/shared/storage/app /home/ubuntu/app/releases/20190715040135/storage/app as ubuntu@13.211.171.135
+ DEBUG [be7ed674] Command: /usr/bin/env ln -s /home/ubuntu/app/shared/storage/app /home/ubuntu/app/releases/20190715040135/storage/app
+  INFO [cf8aa95a] Finished in 0.733 seconds with exit status 0 (successful).
+ DEBUG [1b4842b3] Running [ -L /home/ubuntu/app/releases/20190715040135/storage/framework/cache ] as ubuntu@13.211.171.135
+ DEBUG [1b4842b3] Command: [ -L /home/ubuntu/app/releases/20190715040135/storage/framework/cache ]
+ DEBUG [ef74a615] Finished in 0.739 seconds with exit status 1 (failed).
+ DEBUG [25197983] Running [ -d /home/ubuntu/app/releases/20190715040135/storage/framework/cache ] as ubuntu@13.211.171.135
+ DEBUG [25197983] Command: [ -d /home/ubuntu/app/releases/20190715040135/storage/framework/cache ]
+ DEBUG [20800fcf] Finished in 1.406 seconds with exit status 0 (successful).
+  INFO [da087d9c] Running /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040135/storage/framework/cache as ubuntu@13.211.171.135
+ DEBUG [da087d9c] Command: /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040135/storage/framework/cache
+  INFO [f4132747] Finished in 0.733 seconds with exit status 0 (successful).
+  INFO [aeaa7200] Running /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/cache /home/ubuntu/app/releases/20190715040135/storage/framework/cache as ubuntu@13.211.171.135
+ DEBUG [aeaa7200] Command: /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/cache /home/ubuntu/app/releases/20190715040135/storage/framework/cache
+  INFO [82cc6237] Finished in 0.741 seconds with exit status 0 (successful).
+ DEBUG [0098a9b7] Running [ -L /home/ubuntu/app/releases/20190715040135/storage/framework/sessions ] as ubuntu@13.211.171.135
+ DEBUG [0098a9b7] Command: [ -L /home/ubuntu/app/releases/20190715040135/storage/framework/sessions ]
+ DEBUG [38fb1594] Finished in 0.842 seconds with exit status 1 (failed).
+ DEBUG [2c070257] Running [ -d /home/ubuntu/app/releases/20190715040135/storage/framework/sessions ] as ubuntu@13.211.171.135
+ DEBUG [2c070257] Command: [ -d /home/ubuntu/app/releases/20190715040135/storage/framework/sessions ]
+ DEBUG [936c5306] Finished in 0.817 seconds with exit status 0 (successful).
+  INFO [5f1cbdc8] Running /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040135/storage/framework/sessions as ubuntu@13.211.171.135
+ DEBUG [5f1cbdc8] Command: /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040135/storage/framework/sessions
+  INFO [60f478ac] Finished in 0.735 seconds with exit status 0 (successful).
+  INFO [f74dd1dc] Running /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/sessions /home/ubuntu/app/releases/20190715040135/storage/framework/sessions as ubuntu@13.211.171.135
+ DEBUG [f74dd1dc] Command: /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/sessions /home/ubuntu/app/releases/20190715040135/storage/framework/sessions
+  INFO [3af91a21] Finished in 0.736 seconds with exit status 0 (successful).
+ DEBUG [6229e85a] Running [ -L /home/ubuntu/app/releases/20190715040135/storage/framework/views ] as ubuntu@13.211.171.135
+ DEBUG [6229e85a] Command: [ -L /home/ubuntu/app/releases/20190715040135/storage/framework/views ]
+ DEBUG [13e40931] Finished in 0.882 seconds with exit status 1 (failed).
+ DEBUG [9022faca] Running [ -d /home/ubuntu/app/releases/20190715040135/storage/framework/views ] as ubuntu@13.211.171.135
+ DEBUG [9022faca] Command: [ -d /home/ubuntu/app/releases/20190715040135/storage/framework/views ]
+ DEBUG [0b6475a9] Finished in 0.791 seconds with exit status 0 (successful).
+  INFO [2e7eddb4] Running /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040135/storage/framework/views as ubuntu@13.211.171.135
+ DEBUG [2e7eddb4] Command: /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040135/storage/framework/views
+  INFO [4545d2b3] Finished in 0.734 seconds with exit status 0 (successful).
+  INFO [5b2c9998] Running /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/views /home/ubuntu/app/releases/20190715040135/storage/framework/views as ubuntu@13.211.171.135
+ DEBUG [5b2c9998] Command: /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/views /home/ubuntu/app/releases/20190715040135/storage/framework/views
+  INFO [86527d6e] Finished in 0.734 seconds with exit status 0 (successful).
+ DEBUG [13aeca2b] Running [ -L /home/ubuntu/app/releases/20190715040135/storage/framework/testing ] as ubuntu@13.211.171.135
+ DEBUG [13aeca2b] Command: [ -L /home/ubuntu/app/releases/20190715040135/storage/framework/testing ]
+ DEBUG [25fa99ec] Finished in 0.734 seconds with exit status 1 (failed).
+ DEBUG [f6330a51] Running [ -d /home/ubuntu/app/releases/20190715040135/storage/framework/testing ] as ubuntu@13.211.171.135
+ DEBUG [f6330a51] Command: [ -d /home/ubuntu/app/releases/20190715040135/storage/framework/testing ]
+ DEBUG [c822c9ea] Finished in 0.766 seconds with exit status 0 (successful).
+  INFO [fda95430] Running /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040135/storage/framework/testing as ubuntu@13.211.171.135
+ DEBUG [fda95430] Command: /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040135/storage/framework/testing
+  INFO [898f3258] Finished in 0.815 seconds with exit status 0 (successful).
+  INFO [8f4e7218] Running /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/testing /home/ubuntu/app/releases/20190715040135/storage/framework/testing as ubuntu@13.211.171.135
+ DEBUG [8f4e7218] Command: /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/testing /home/ubuntu/app/releases/20190715040135/storage/framework/testing
+  INFO [1b9fc802] Finished in 0.815 seconds with exit status 0 (successful).
+ DEBUG [ed9c9374] Running [ -L /home/ubuntu/app/releases/20190715040135/storage/logs ] as ubuntu@13.211.171.135
+ DEBUG [ed9c9374] Command: [ -L /home/ubuntu/app/releases/20190715040135/storage/logs ]
+ DEBUG [f85ff05c] Finished in 0.769 seconds with exit status 1 (failed).
+ DEBUG [5c6d7323] Running [ -d /home/ubuntu/app/releases/20190715040135/storage/logs ] as ubuntu@13.211.171.135
+ DEBUG [5c6d7323] Command: [ -d /home/ubuntu/app/releases/20190715040135/storage/logs ]
+ DEBUG [a5546ad1] Finished in 0.970 seconds with exit status 0 (successful).
+  INFO [636cac29] Running /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040135/storage/logs as ubuntu@13.211.171.135
+ DEBUG [636cac29] Command: /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040135/storage/logs
+  INFO [9be82693] Finished in 0.921 seconds with exit status 0 (successful).
+  INFO [7063dda3] Running /usr/bin/env ln -s /home/ubuntu/app/shared/storage/logs /home/ubuntu/app/releases/20190715040135/storage/logs as ubuntu@13.211.171.135
+ DEBUG [7063dda3] Command: /usr/bin/env ln -s /home/ubuntu/app/shared/storage/logs /home/ubuntu/app/releases/20190715040135/storage/logs
+  INFO [e34f8d28] Finished in 0.921 seconds with exit status 0 (successful).
+  INFO [74eed5b6] Running vendorDir=/home/ubuntu/app/current/vendor; if [ -d $vendorDir ] || [ -h $vendorDir ]; then cp -a $vendorDir /home/ubuntu/app/releases/20190715040135/vendor; fi; as ubuntu@13.211.171.135
+ DEBUG [74eed5b6] Command: vendorDir=/home/ubuntu/app/current/vendor; if [ -d $vendorDir ] || [ -h $vendorDir ]; then cp -a $vendorDir /home/ubuntu/app/releases/20190715040135/vendor; fi;
+  INFO [246753b8] Finished in 0.922 seconds with exit status 0 (successful).
+ DEBUG [7d20b1e4] Running if test ! -d /home/ubuntu/app/releases/20190715040135; then echo "Directory does not exist '/home/ubuntu/app/releases/20190715040135'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [7d20b1e4] Command: if test ! -d /home/ubuntu/app/releases/20190715040135; then echo "Directory does not exist '/home/ubuntu/app/releases/20190715040135'" 1>&2; false; fi
+ DEBUG [2365837d] Finished in 0.812 seconds with exit status 0 (successful).
+  INFO [b6b5ad12] Running /usr/bin/env composer install --no-dev --quiet --prefer-dist --optimize-autoloader as ubuntu@13.211.171.135
+ DEBUG [b6b5ad12] Command: cd /home/ubuntu/app/releases/20190715040135 && /usr/bin/env composer install --no-dev --quiet --prefer-dist --optimize-autoloader
+  INFO [e03dba41] Finished in 96.356 seconds with exit status 0 (successful).
+  INFO [270ed301] Running /usr/bin/env sudo chmod -R ug+rwx /home/ubuntu/app/shared/storage/ /home/ubuntu/app/releases/20190715040135/bootstrap/cache/ as ubuntu@13.211.171.135
+ DEBUG [270ed301] Command: /usr/bin/env sudo chmod -R ug+rwx /home/ubuntu/app/shared/storage/ /home/ubuntu/app/releases/20190715040135/bootstrap/cache/
+  INFO [7967770f] Finished in 0.816 seconds with exit status 0 (successful).
+  INFO [cce00a41] Running /usr/bin/env sudo chgrp -R www-data /home/ubuntu/app/shared/storage/ /home/ubuntu/app/releases/20190715040135/bootstrap/cache/ as ubuntu@13.211.171.135
+ DEBUG [cce00a41] Command: /usr/bin/env sudo chgrp -R www-data /home/ubuntu/app/shared/storage/ /home/ubuntu/app/releases/20190715040135/bootstrap/cache/
+  INFO [5ccccd17] Finished in 0.922 seconds with exit status 0 (successful).
+  INFO [3c9e4056] Running cp /home/ubuntu/app/releases/20190715040135/.env.server /home/ubuntu/app/releases/20190715040135/.env as ubuntu@13.211.171.135
+ DEBUG [3c9e4056] Command: cp /home/ubuntu/app/releases/20190715040135/.env.server /home/ubuntu/app/releases/20190715040135/.env
+  INFO [67e38981] Finished in 0.914 seconds with exit status 0 (successful).
+  INFO [2a98b1a0] Running sed --in-place -f /home/ubuntu/app/overlay/parameters.sed /home/ubuntu/app/releases/20190715040135/.env as ubuntu@13.211.171.135
+ DEBUG [2a98b1a0] Command: sed --in-place -f /home/ubuntu/app/overlay/parameters.sed /home/ubuntu/app/releases/20190715040135/.env
+ DEBUG [81075060] 	sed: 
+ DEBUG [81075060] 	couldn't open file /home/ubuntu/app/overlay/parameters.sed: No such file or directory
+ DEBUG [81075060] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-07-15 09:50:18 +0545 cap staging deploy branch=develop
+  INFO ---------------------------------------------------------------------------
+  INFO [16c36e7c] Running /usr/bin/env mkdir -p /tmp as ubuntu@13.211.171.135
+ DEBUG [16c36e7c] Command: /usr/bin/env mkdir -p /tmp
+  INFO [d6f3e28e] Finished in 3.790 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-awsTest-staging-praneen.sh 0.0%
+  INFO Uploading /tmp/git-ssh-awsTest-staging-praneen.sh 100.0%
+  INFO [a004018a] Running /usr/bin/env chmod 700 /tmp/git-ssh-awsTest-staging-praneen.sh as ubuntu@13.211.171.135
+ DEBUG [a004018a] Command: /usr/bin/env chmod 700 /tmp/git-ssh-awsTest-staging-praneen.sh
+  INFO [abf778eb] Finished in 0.863 seconds with exit status 0 (successful).
+  INFO [fd8ae03a] Running /usr/bin/env git ls-remote git@github.com:praneenshakya/awsTest.git HEAD as ubuntu@13.211.171.135
+ DEBUG [fd8ae03a] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git ls-remote git@github.com:praneenshakya/awsTest.git HEAD )
+ DEBUG [52d2850b] 	423072ca911863c8e3ae1ac6c295204275a84ba1	HEAD
+  INFO [52d2850b] Finished in 3.467 seconds with exit status 0 (successful).
+  INFO [b414e9ac] Running /usr/bin/env mkdir -p /home/ubuntu/app/shared /home/ubuntu/app/releases as ubuntu@13.211.171.135
+ DEBUG [b414e9ac] Command: /usr/bin/env mkdir -p /home/ubuntu/app/shared /home/ubuntu/app/releases
+  INFO [6149c8d7] Finished in 0.919 seconds with exit status 0 (successful).
+  INFO [efa72307] Running /usr/bin/env mkdir -p /home/ubuntu/app/shared/storage/app /home/ubuntu/app/shared/storage/framework/cache /home/ubuntu/app/shared/storage/framework/sessions /home/ubuntu/app/shared/storage/framework/views /home/ubuntu/app/shared/storage/framework/testing /home/ubuntu/app/shared/storage/logs as ubuntu@13.211.171.135
+ DEBUG [efa72307] Command: /usr/bin/env mkdir -p /home/ubuntu/app/shared/storage/app /home/ubuntu/app/shared/storage/framework/cache /home/ubuntu/app/shared/storage/framework/sessions /home/ubuntu/app/shared/storage/framework/views /home/ubuntu/app/shared/storage/framework/testing /home/ubuntu/app/shared/storage/logs
+  INFO [b3f7af02] Finished in 0.910 seconds with exit status 0 (successful).
+ DEBUG [3d91dd26] Running [ -f /home/ubuntu/app/current/REVISION ] as ubuntu@13.211.171.135
+ DEBUG [3d91dd26] Command: [ -f /home/ubuntu/app/current/REVISION ]
+ DEBUG [73d24834] Finished in 0.919 seconds with exit status 0 (successful).
+ DEBUG [63dccb34] Running /usr/bin/env cat /home/ubuntu/app/current/REVISION 2>/dev/null as ubuntu@13.211.171.135
+ DEBUG [63dccb34] Command: /usr/bin/env cat /home/ubuntu/app/current/REVISION 2>/dev/null
+ DEBUG [dbc34eab] 	423072ca911863c8e3ae1ac6c295204275a84ba1
+ DEBUG [dbc34eab] Finished in 0.818 seconds with exit status 0 (successful).
+ DEBUG [f4e8d6e1] Running [ -f /home/ubuntu/app/repo/HEAD ] as ubuntu@13.211.171.135
+ DEBUG [f4e8d6e1] Command: [ -f /home/ubuntu/app/repo/HEAD ]
+ DEBUG [d64cb41a] Finished in 0.719 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/app/repo
+ DEBUG [272cbcfa] Running if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [272cbcfa] Command: if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi
+ DEBUG [527263dc] Finished in 0.801 seconds with exit status 0 (successful).
+  INFO [f4a9e680] Running /usr/bin/env git remote set-url origin git@github.com:praneenshakya/awsTest.git as ubuntu@13.211.171.135
+ DEBUG [f4a9e680] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git remote set-url origin git@github.com:praneenshakya/awsTest.git )
+  INFO [acc77e60] Finished in 0.758 seconds with exit status 0 (successful).
+  INFO [33469482] Running /usr/bin/env git remote update --prune as ubuntu@13.211.171.135
+ DEBUG [33469482] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [d9e8aba9] 	Fetching origin
+  INFO [d9e8aba9] Finished in 3.846 seconds with exit status 0 (successful).
+ DEBUG [cf70d5c5] Running if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [cf70d5c5] Command: if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi
+ DEBUG [07707337] Finished in 0.922 seconds with exit status 0 (successful).
+  INFO [293e7f29] Running /usr/bin/env mkdir -p /home/ubuntu/app/releases/20190715040533 as ubuntu@13.211.171.135
+ DEBUG [293e7f29] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env mkdir -p /home/ubuntu/app/releases/20190715040533 )
+  INFO [1a1722e8] Finished in 0.913 seconds with exit status 0 (successful).
+  INFO [7bfa0d5e] Running /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /home/ubuntu/app/releases/20190715040533 as ubuntu@13.211.171.135
+ DEBUG [7bfa0d5e] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /home/ubuntu/app/releases/20190715040533 )
+  INFO [e1153b44] Finished in 0.853 seconds with exit status 0 (successful).
+ DEBUG [15e07046] Running if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [15e07046] Command: if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi
+ DEBUG [7ce50d44] Finished in 0.875 seconds with exit status 0 (successful).
+ DEBUG [cd99c5a0] Running /usr/bin/env git rev-list --max-count=1 develop as ubuntu@13.211.171.135
+ DEBUG [cd99c5a0] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git rev-list --max-count=1 develop )
+ DEBUG [837b4c74] 	423072ca911863c8e3ae1ac6c295204275a84ba1
+ DEBUG [837b4c74] Finished in 0.930 seconds with exit status 0 (successful).
+ DEBUG [92229f1e] Running if test ! -d /home/ubuntu/app/releases/20190715040533; then echo "Directory does not exist '/home/ubuntu/app/releases/20190715040533'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [92229f1e] Command: if test ! -d /home/ubuntu/app/releases/20190715040533; then echo "Directory does not exist '/home/ubuntu/app/releases/20190715040533'" 1>&2; false; fi
+ DEBUG [80ac85b8] Finished in 0.916 seconds with exit status 0 (successful).
+  INFO [710791e4] Running /usr/bin/env echo "423072ca911863c8e3ae1ac6c295204275a84ba1" > REVISION as ubuntu@13.211.171.135
+ DEBUG [710791e4] Command: cd /home/ubuntu/app/releases/20190715040533 && /usr/bin/env echo "423072ca911863c8e3ae1ac6c295204275a84ba1" > REVISION
+  INFO [46c6ad17] Finished in 0.820 seconds with exit status 0 (successful).
+  INFO [a4dbd5d6] Running /usr/bin/env mkdir -p /home/ubuntu/app/releases/20190715040533/storage /home/ubuntu/app/releases/20190715040533/storage/framework as ubuntu@13.211.171.135
+ DEBUG [a4dbd5d6] Command: /usr/bin/env mkdir -p /home/ubuntu/app/releases/20190715040533/storage /home/ubuntu/app/releases/20190715040533/storage/framework
+  INFO [aa805816] Finished in 0.915 seconds with exit status 0 (successful).
+ DEBUG [2ed14aea] Running [ -L /home/ubuntu/app/releases/20190715040533/storage/app ] as ubuntu@13.211.171.135
+ DEBUG [2ed14aea] Command: [ -L /home/ubuntu/app/releases/20190715040533/storage/app ]
+ DEBUG [f50c56eb] Finished in 0.921 seconds with exit status 1 (failed).
+ DEBUG [aa1f8c73] Running [ -d /home/ubuntu/app/releases/20190715040533/storage/app ] as ubuntu@13.211.171.135
+ DEBUG [aa1f8c73] Command: [ -d /home/ubuntu/app/releases/20190715040533/storage/app ]
+ DEBUG [32c4c676] Finished in 0.918 seconds with exit status 0 (successful).
+  INFO [255b5fe5] Running /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040533/storage/app as ubuntu@13.211.171.135
+ DEBUG [255b5fe5] Command: /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040533/storage/app
+  INFO [08ac63b0] Finished in 0.922 seconds with exit status 0 (successful).
+  INFO [91ed8578] Running /usr/bin/env ln -s /home/ubuntu/app/shared/storage/app /home/ubuntu/app/releases/20190715040533/storage/app as ubuntu@13.211.171.135
+ DEBUG [91ed8578] Command: /usr/bin/env ln -s /home/ubuntu/app/shared/storage/app /home/ubuntu/app/releases/20190715040533/storage/app
+  INFO [1d70dc6d] Finished in 0.922 seconds with exit status 0 (successful).
+ DEBUG [411bb38e] Running [ -L /home/ubuntu/app/releases/20190715040533/storage/framework/cache ] as ubuntu@13.211.171.135
+ DEBUG [411bb38e] Command: [ -L /home/ubuntu/app/releases/20190715040533/storage/framework/cache ]
+ DEBUG [7794fd24] Finished in 0.817 seconds with exit status 1 (failed).
+ DEBUG [55ce24dc] Running [ -d /home/ubuntu/app/releases/20190715040533/storage/framework/cache ] as ubuntu@13.211.171.135
+ DEBUG [55ce24dc] Command: [ -d /home/ubuntu/app/releases/20190715040533/storage/framework/cache ]
+ DEBUG [468e2f5a] Finished in 0.919 seconds with exit status 0 (successful).
+  INFO [af8f622a] Running /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040533/storage/framework/cache as ubuntu@13.211.171.135
+ DEBUG [af8f622a] Command: /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040533/storage/framework/cache
+  INFO [72bc6657] Finished in 0.921 seconds with exit status 0 (successful).
+  INFO [0e71ad52] Running /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/cache /home/ubuntu/app/releases/20190715040533/storage/framework/cache as ubuntu@13.211.171.135
+ DEBUG [0e71ad52] Command: /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/cache /home/ubuntu/app/releases/20190715040533/storage/framework/cache
+  INFO [ac671037] Finished in 0.818 seconds with exit status 0 (successful).
+ DEBUG [847a6446] Running [ -L /home/ubuntu/app/releases/20190715040533/storage/framework/sessions ] as ubuntu@13.211.171.135
+ DEBUG [847a6446] Command: [ -L /home/ubuntu/app/releases/20190715040533/storage/framework/sessions ]
+ DEBUG [c611d220] Finished in 0.919 seconds with exit status 1 (failed).
+ DEBUG [4a0eb125] Running [ -d /home/ubuntu/app/releases/20190715040533/storage/framework/sessions ] as ubuntu@13.211.171.135
+ DEBUG [4a0eb125] Command: [ -d /home/ubuntu/app/releases/20190715040533/storage/framework/sessions ]
+ DEBUG [9a477335] Finished in 0.921 seconds with exit status 0 (successful).
+  INFO [5153ac97] Running /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040533/storage/framework/sessions as ubuntu@13.211.171.135
+ DEBUG [5153ac97] Command: /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040533/storage/framework/sessions
+  INFO [d46cea9a] Finished in 0.920 seconds with exit status 0 (successful).
+  INFO [72da92cf] Running /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/sessions /home/ubuntu/app/releases/20190715040533/storage/framework/sessions as ubuntu@13.211.171.135
+ DEBUG [72da92cf] Command: /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/sessions /home/ubuntu/app/releases/20190715040533/storage/framework/sessions
+  INFO [fd883011] Finished in 0.818 seconds with exit status 0 (successful).
+ DEBUG [1cb690e7] Running [ -L /home/ubuntu/app/releases/20190715040533/storage/framework/views ] as ubuntu@13.211.171.135
+ DEBUG [1cb690e7] Command: [ -L /home/ubuntu/app/releases/20190715040533/storage/framework/views ]
+ DEBUG [b5d48541] Finished in 0.918 seconds with exit status 1 (failed).
+ DEBUG [b7c3a1ea] Running [ -d /home/ubuntu/app/releases/20190715040533/storage/framework/views ] as ubuntu@13.211.171.135
+ DEBUG [b7c3a1ea] Command: [ -d /home/ubuntu/app/releases/20190715040533/storage/framework/views ]
+ DEBUG [cca6e021] Finished in 0.921 seconds with exit status 0 (successful).
+  INFO [fb8d397e] Running /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040533/storage/framework/views as ubuntu@13.211.171.135
+ DEBUG [fb8d397e] Command: /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040533/storage/framework/views
+  INFO [f72d5632] Finished in 0.920 seconds with exit status 0 (successful).
+  INFO [8a32441a] Running /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/views /home/ubuntu/app/releases/20190715040533/storage/framework/views as ubuntu@13.211.171.135
+ DEBUG [8a32441a] Command: /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/views /home/ubuntu/app/releases/20190715040533/storage/framework/views
+  INFO [a0ca4412] Finished in 0.920 seconds with exit status 0 (successful).
+ DEBUG [ad54aa2b] Running [ -L /home/ubuntu/app/releases/20190715040533/storage/framework/testing ] as ubuntu@13.211.171.135
+ DEBUG [ad54aa2b] Command: [ -L /home/ubuntu/app/releases/20190715040533/storage/framework/testing ]
+ DEBUG [138d3d01] Finished in 0.920 seconds with exit status 1 (failed).
+ DEBUG [552aca02] Running [ -d /home/ubuntu/app/releases/20190715040533/storage/framework/testing ] as ubuntu@13.211.171.135
+ DEBUG [552aca02] Command: [ -d /home/ubuntu/app/releases/20190715040533/storage/framework/testing ]
+ DEBUG [98e71002] Finished in 0.817 seconds with exit status 0 (successful).
+  INFO [fb0455af] Running /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040533/storage/framework/testing as ubuntu@13.211.171.135
+ DEBUG [fb0455af] Command: /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040533/storage/framework/testing
+  INFO [afd7a696] Finished in 1.024 seconds with exit status 0 (successful).
+  INFO [9f4e7e63] Running /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/testing /home/ubuntu/app/releases/20190715040533/storage/framework/testing as ubuntu@13.211.171.135
+ DEBUG [9f4e7e63] Command: /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/testing /home/ubuntu/app/releases/20190715040533/storage/framework/testing
+  INFO [baaeed59] Finished in 0.924 seconds with exit status 0 (successful).
+ DEBUG [36e1bc63] Running [ -L /home/ubuntu/app/releases/20190715040533/storage/logs ] as ubuntu@13.211.171.135
+ DEBUG [36e1bc63] Command: [ -L /home/ubuntu/app/releases/20190715040533/storage/logs ]
+ DEBUG [76c19c64] Finished in 0.915 seconds with exit status 1 (failed).
+ DEBUG [e19e4806] Running [ -d /home/ubuntu/app/releases/20190715040533/storage/logs ] as ubuntu@13.211.171.135
+ DEBUG [e19e4806] Command: [ -d /home/ubuntu/app/releases/20190715040533/storage/logs ]
+ DEBUG [43eafc4d] Finished in 0.922 seconds with exit status 0 (successful).
+  INFO [ae8539fe] Running /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040533/storage/logs as ubuntu@13.211.171.135
+ DEBUG [ae8539fe] Command: /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040533/storage/logs
+  INFO [92ee129d] Finished in 0.920 seconds with exit status 0 (successful).
+  INFO [da17fc1a] Running /usr/bin/env ln -s /home/ubuntu/app/shared/storage/logs /home/ubuntu/app/releases/20190715040533/storage/logs as ubuntu@13.211.171.135
+ DEBUG [da17fc1a] Command: /usr/bin/env ln -s /home/ubuntu/app/shared/storage/logs /home/ubuntu/app/releases/20190715040533/storage/logs
+  INFO [10c36842] Finished in 0.815 seconds with exit status 0 (successful).
+  INFO [ef23f5e8] Running vendorDir=/home/ubuntu/app/current/vendor; if [ -d $vendorDir ] || [ -h $vendorDir ]; then cp -a $vendorDir /home/ubuntu/app/releases/20190715040533/vendor; fi; as ubuntu@13.211.171.135
+ DEBUG [ef23f5e8] Command: vendorDir=/home/ubuntu/app/current/vendor; if [ -d $vendorDir ] || [ -h $vendorDir ]; then cp -a $vendorDir /home/ubuntu/app/releases/20190715040533/vendor; fi;
+  INFO [2873ad7d] Finished in 0.918 seconds with exit status 0 (successful).
+ DEBUG [79f9f932] Running if test ! -d /home/ubuntu/app/releases/20190715040533; then echo "Directory does not exist '/home/ubuntu/app/releases/20190715040533'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [79f9f932] Command: if test ! -d /home/ubuntu/app/releases/20190715040533; then echo "Directory does not exist '/home/ubuntu/app/releases/20190715040533'" 1>&2; false; fi
+ DEBUG [055f5909] Finished in 0.920 seconds with exit status 0 (successful).
+  INFO [a4ad71d6] Running /usr/bin/env composer install --no-dev --quiet --prefer-dist --optimize-autoloader as ubuntu@13.211.171.135
+ DEBUG [a4ad71d6] Command: cd /home/ubuntu/app/releases/20190715040533 && /usr/bin/env composer install --no-dev --quiet --prefer-dist --optimize-autoloader
+  INFO [444c2d78] Finished in 2.863 seconds with exit status 0 (successful).
+  INFO [83b407db] Running /usr/bin/env sudo chmod -R ug+rwx /home/ubuntu/app/shared/storage/ /home/ubuntu/app/releases/20190715040533/bootstrap/cache/ as ubuntu@13.211.171.135
+ DEBUG [83b407db] Command: /usr/bin/env sudo chmod -R ug+rwx /home/ubuntu/app/shared/storage/ /home/ubuntu/app/releases/20190715040533/bootstrap/cache/
+  INFO [83299ede] Finished in 0.922 seconds with exit status 0 (successful).
+  INFO [4007ed51] Running /usr/bin/env sudo chgrp -R www-data /home/ubuntu/app/shared/storage/ /home/ubuntu/app/releases/20190715040533/bootstrap/cache/ as ubuntu@13.211.171.135
+ DEBUG [4007ed51] Command: /usr/bin/env sudo chgrp -R www-data /home/ubuntu/app/shared/storage/ /home/ubuntu/app/releases/20190715040533/bootstrap/cache/
+  INFO [dbbc05b6] Finished in 0.920 seconds with exit status 0 (successful).
+  INFO [2fdb1071] Running cp /home/ubuntu/app/releases/20190715040533/.env.server /home/ubuntu/app/releases/20190715040533/.env as ubuntu@13.211.171.135
+ DEBUG [2fdb1071] Command: cp /home/ubuntu/app/releases/20190715040533/.env.server /home/ubuntu/app/releases/20190715040533/.env
+  INFO [275e7778] Finished in 0.918 seconds with exit status 0 (successful).
+  INFO [d1732ade] Running sed --in-place -f /home/ubuntu/app/overlay/parameters.sed /home/ubuntu/app/releases/20190715040533/.env as ubuntu@13.211.171.135
+ DEBUG [d1732ade] Command: sed --in-place -f /home/ubuntu/app/overlay/parameters.sed /home/ubuntu/app/releases/20190715040533/.env
+ DEBUG [c2d8625c] 	sed: 
+ DEBUG [c2d8625c] 	couldn't open file /home/ubuntu/app/overlay/parameters.sed: No such file or directory
+ DEBUG [c2d8625c] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-07-15 09:53:49 +0545 cap staging deploy branch=develop
+  INFO ---------------------------------------------------------------------------
+  INFO [3bc06c44] Running /usr/bin/env mkdir -p /tmp as ubuntu@13.211.171.135
+ DEBUG [3bc06c44] Command: /usr/bin/env mkdir -p /tmp
+  INFO [ddfe7c75] Finished in 4.737 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-awsTest-staging-praneen.sh 0.0%
+  INFO Uploading /tmp/git-ssh-awsTest-staging-praneen.sh 100.0%
+  INFO [b009ed9f] Running /usr/bin/env chmod 700 /tmp/git-ssh-awsTest-staging-praneen.sh as ubuntu@13.211.171.135
+ DEBUG [b009ed9f] Command: /usr/bin/env chmod 700 /tmp/git-ssh-awsTest-staging-praneen.sh
+  INFO [a4e018c0] Finished in 0.919 seconds with exit status 0 (successful).
+  INFO [52362c91] Running /usr/bin/env git ls-remote git@github.com:praneenshakya/awsTest.git HEAD as ubuntu@13.211.171.135
+ DEBUG [52362c91] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git ls-remote git@github.com:praneenshakya/awsTest.git HEAD )
+ DEBUG [b57e0441] 	423072ca911863c8e3ae1ac6c295204275a84ba1	HEAD
+  INFO [b57e0441] Finished in 6.436 seconds with exit status 0 (successful).
+  INFO [fffdb389] Running /usr/bin/env mkdir -p /home/ubuntu/app/shared /home/ubuntu/app/releases as ubuntu@13.211.171.135
+ DEBUG [fffdb389] Command: /usr/bin/env mkdir -p /home/ubuntu/app/shared /home/ubuntu/app/releases
+  INFO [dba824a2] Finished in 0.902 seconds with exit status 0 (successful).
+  INFO [36aadc3b] Running /usr/bin/env mkdir -p /home/ubuntu/app/shared/storage/app /home/ubuntu/app/shared/storage/framework/cache /home/ubuntu/app/shared/storage/framework/sessions /home/ubuntu/app/shared/storage/framework/views /home/ubuntu/app/shared/storage/framework/testing /home/ubuntu/app/shared/storage/logs as ubuntu@13.211.171.135
+ DEBUG [36aadc3b] Command: /usr/bin/env mkdir -p /home/ubuntu/app/shared/storage/app /home/ubuntu/app/shared/storage/framework/cache /home/ubuntu/app/shared/storage/framework/sessions /home/ubuntu/app/shared/storage/framework/views /home/ubuntu/app/shared/storage/framework/testing /home/ubuntu/app/shared/storage/logs
+  INFO [bd76aa54] Finished in 1.016 seconds with exit status 0 (successful).
+ DEBUG [ef1d5e9a] Running [ -f /home/ubuntu/app/current/REVISION ] as ubuntu@13.211.171.135
+ DEBUG [ef1d5e9a] Command: [ -f /home/ubuntu/app/current/REVISION ]
+ DEBUG [d1198590] Finished in 0.868 seconds with exit status 0 (successful).
+ DEBUG [13617384] Running /usr/bin/env cat /home/ubuntu/app/current/REVISION 2>/dev/null as ubuntu@13.211.171.135
+ DEBUG [13617384] Command: /usr/bin/env cat /home/ubuntu/app/current/REVISION 2>/dev/null
+ DEBUG [27e1450f] 	423072ca911863c8e3ae1ac6c295204275a84ba1
+ DEBUG [27e1450f] Finished in 0.751 seconds with exit status 0 (successful).
+ DEBUG [d00891f6] Running [ -f /home/ubuntu/app/repo/HEAD ] as ubuntu@13.211.171.135
+ DEBUG [d00891f6] Command: [ -f /home/ubuntu/app/repo/HEAD ]
+ DEBUG [dabccf73] Finished in 0.756 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/app/repo
+ DEBUG [9948b6f7] Running if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [9948b6f7] Command: if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi
+ DEBUG [9c817b8a] Finished in 0.749 seconds with exit status 0 (successful).
+  INFO [21cc7b06] Running /usr/bin/env git remote set-url origin git@github.com:praneenshakya/awsTest.git as ubuntu@13.211.171.135
+ DEBUG [21cc7b06] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git remote set-url origin git@github.com:praneenshakya/awsTest.git )
+  INFO [cee2101e] Finished in 0.772 seconds with exit status 0 (successful).
+  INFO [db5621f6] Running /usr/bin/env git remote update --prune as ubuntu@13.211.171.135
+ DEBUG [db5621f6] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [f6177938] 	Fetching origin
+  INFO [f6177938] Finished in 3.585 seconds with exit status 0 (successful).
+ DEBUG [a43eb697] Running if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [a43eb697] Command: if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi
+ DEBUG [dcb9abaa] Finished in 0.793 seconds with exit status 0 (successful).
+  INFO [4d78632d] Running /usr/bin/env mkdir -p /home/ubuntu/app/releases/20190715040945 as ubuntu@13.211.171.135
+ DEBUG [4d78632d] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env mkdir -p /home/ubuntu/app/releases/20190715040945 )
+  INFO [5f8b23e6] Finished in 0.920 seconds with exit status 0 (successful).
+  INFO [a20e9531] Running /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /home/ubuntu/app/releases/20190715040945 as ubuntu@13.211.171.135
+ DEBUG [a20e9531] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /home/ubuntu/app/releases/20190715040945 )
+  INFO [560b56d6] Finished in 0.919 seconds with exit status 0 (successful).
+ DEBUG [da9fd59e] Running if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [da9fd59e] Command: if test ! -d /home/ubuntu/app/repo; then echo "Directory does not exist '/home/ubuntu/app/repo'" 1>&2; false; fi
+ DEBUG [ad02751d] Finished in 0.780 seconds with exit status 0 (successful).
+ DEBUG [89a6f82e] Running /usr/bin/env git rev-list --max-count=1 develop as ubuntu@13.211.171.135
+ DEBUG [89a6f82e] Command: cd /home/ubuntu/app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-awsTest-staging-praneen.sh" ; /usr/bin/env git rev-list --max-count=1 develop )
+ DEBUG [73328175] 	423072ca911863c8e3ae1ac6c295204275a84ba1
+ DEBUG [73328175] Finished in 0.754 seconds with exit status 0 (successful).
+ DEBUG [eaf3f284] Running if test ! -d /home/ubuntu/app/releases/20190715040945; then echo "Directory does not exist '/home/ubuntu/app/releases/20190715040945'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [eaf3f284] Command: if test ! -d /home/ubuntu/app/releases/20190715040945; then echo "Directory does not exist '/home/ubuntu/app/releases/20190715040945'" 1>&2; false; fi
+ DEBUG [fc0a11e7] Finished in 0.751 seconds with exit status 0 (successful).
+  INFO [b4d1fee6] Running /usr/bin/env echo "423072ca911863c8e3ae1ac6c295204275a84ba1" > REVISION as ubuntu@13.211.171.135
+ DEBUG [b4d1fee6] Command: cd /home/ubuntu/app/releases/20190715040945 && /usr/bin/env echo "423072ca911863c8e3ae1ac6c295204275a84ba1" > REVISION
+  INFO [7fc00d3e] Finished in 0.753 seconds with exit status 0 (successful).
+  INFO [66a2f250] Running /usr/bin/env mkdir -p /home/ubuntu/app/releases/20190715040945/storage /home/ubuntu/app/releases/20190715040945/storage/framework as ubuntu@13.211.171.135
+ DEBUG [66a2f250] Command: /usr/bin/env mkdir -p /home/ubuntu/app/releases/20190715040945/storage /home/ubuntu/app/releases/20190715040945/storage/framework
+  INFO [a019248e] Finished in 0.753 seconds with exit status 0 (successful).
+ DEBUG [88b8441e] Running [ -L /home/ubuntu/app/releases/20190715040945/storage/app ] as ubuntu@13.211.171.135
+ DEBUG [88b8441e] Command: [ -L /home/ubuntu/app/releases/20190715040945/storage/app ]
+ DEBUG [2c2d39f6] Finished in 0.903 seconds with exit status 1 (failed).
+ DEBUG [9498f390] Running [ -d /home/ubuntu/app/releases/20190715040945/storage/app ] as ubuntu@13.211.171.135
+ DEBUG [9498f390] Command: [ -d /home/ubuntu/app/releases/20190715040945/storage/app ]
+ DEBUG [56d1ef36] Finished in 0.924 seconds with exit status 0 (successful).
+  INFO [7521562f] Running /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040945/storage/app as ubuntu@13.211.171.135
+ DEBUG [7521562f] Command: /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040945/storage/app
+  INFO [452e0895] Finished in 0.920 seconds with exit status 0 (successful).
+  INFO [2bdeff36] Running /usr/bin/env ln -s /home/ubuntu/app/shared/storage/app /home/ubuntu/app/releases/20190715040945/storage/app as ubuntu@13.211.171.135
+ DEBUG [2bdeff36] Command: /usr/bin/env ln -s /home/ubuntu/app/shared/storage/app /home/ubuntu/app/releases/20190715040945/storage/app
+  INFO [5ec40b64] Finished in 0.754 seconds with exit status 0 (successful).
+ DEBUG [d1160602] Running [ -L /home/ubuntu/app/releases/20190715040945/storage/framework/cache ] as ubuntu@13.211.171.135
+ DEBUG [d1160602] Command: [ -L /home/ubuntu/app/releases/20190715040945/storage/framework/cache ]
+ DEBUG [fc19152c] Finished in 0.758 seconds with exit status 1 (failed).
+ DEBUG [b14239d3] Running [ -d /home/ubuntu/app/releases/20190715040945/storage/framework/cache ] as ubuntu@13.211.171.135
+ DEBUG [b14239d3] Command: [ -d /home/ubuntu/app/releases/20190715040945/storage/framework/cache ]
+ DEBUG [f6c2d53c] Finished in 0.799 seconds with exit status 0 (successful).
+  INFO [0de47934] Running /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040945/storage/framework/cache as ubuntu@13.211.171.135
+ DEBUG [0de47934] Command: /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040945/storage/framework/cache
+  INFO [bd3f6cd5] Finished in 0.958 seconds with exit status 0 (successful).
+  INFO [cada9478] Running /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/cache /home/ubuntu/app/releases/20190715040945/storage/framework/cache as ubuntu@13.211.171.135
+ DEBUG [cada9478] Command: /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/cache /home/ubuntu/app/releases/20190715040945/storage/framework/cache
+  INFO [d1cbe05e] Finished in 0.791 seconds with exit status 0 (successful).
+ DEBUG [0c41e17e] Running [ -L /home/ubuntu/app/releases/20190715040945/storage/framework/sessions ] as ubuntu@13.211.171.135
+ DEBUG [0c41e17e] Command: [ -L /home/ubuntu/app/releases/20190715040945/storage/framework/sessions ]
+ DEBUG [5bd136da] Finished in 0.747 seconds with exit status 1 (failed).
+ DEBUG [8f83c639] Running [ -d /home/ubuntu/app/releases/20190715040945/storage/framework/sessions ] as ubuntu@13.211.171.135
+ DEBUG [8f83c639] Command: [ -d /home/ubuntu/app/releases/20190715040945/storage/framework/sessions ]
+ DEBUG [fec53650] Finished in 0.756 seconds with exit status 0 (successful).
+  INFO [4a49f1d3] Running /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040945/storage/framework/sessions as ubuntu@13.211.171.135
+ DEBUG [4a49f1d3] Command: /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040945/storage/framework/sessions
+  INFO [57598729] Finished in 0.755 seconds with exit status 0 (successful).
+  INFO [6cb447c9] Running /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/sessions /home/ubuntu/app/releases/20190715040945/storage/framework/sessions as ubuntu@13.211.171.135
+ DEBUG [6cb447c9] Command: /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/sessions /home/ubuntu/app/releases/20190715040945/storage/framework/sessions
+  INFO [431e7893] Finished in 0.753 seconds with exit status 0 (successful).
+ DEBUG [9f83654f] Running [ -L /home/ubuntu/app/releases/20190715040945/storage/framework/views ] as ubuntu@13.211.171.135
+ DEBUG [9f83654f] Command: [ -L /home/ubuntu/app/releases/20190715040945/storage/framework/views ]
+ DEBUG [8c0d4f6d] Finished in 0.752 seconds with exit status 1 (failed).
+ DEBUG [b1bd1183] Running [ -d /home/ubuntu/app/releases/20190715040945/storage/framework/views ] as ubuntu@13.211.171.135
+ DEBUG [b1bd1183] Command: [ -d /home/ubuntu/app/releases/20190715040945/storage/framework/views ]
+ DEBUG [4ef9bde2] Finished in 0.860 seconds with exit status 0 (successful).
+  INFO [6304ab3d] Running /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040945/storage/framework/views as ubuntu@13.211.171.135
+ DEBUG [6304ab3d] Command: /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040945/storage/framework/views
+  INFO [b3cdaddc] Finished in 0.747 seconds with exit status 0 (successful).
+  INFO [7aac7f22] Running /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/views /home/ubuntu/app/releases/20190715040945/storage/framework/views as ubuntu@13.211.171.135
+ DEBUG [7aac7f22] Command: /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/views /home/ubuntu/app/releases/20190715040945/storage/framework/views
+  INFO [cba90a7a] Finished in 0.813 seconds with exit status 0 (successful).
+ DEBUG [ae65af57] Running [ -L /home/ubuntu/app/releases/20190715040945/storage/framework/testing ] as ubuntu@13.211.171.135
+ DEBUG [ae65af57] Command: [ -L /home/ubuntu/app/releases/20190715040945/storage/framework/testing ]
+ DEBUG [b6c811e0] Finished in 0.785 seconds with exit status 1 (failed).
+ DEBUG [67d0844e] Running [ -d /home/ubuntu/app/releases/20190715040945/storage/framework/testing ] as ubuntu@13.211.171.135
+ DEBUG [67d0844e] Command: [ -d /home/ubuntu/app/releases/20190715040945/storage/framework/testing ]
+ DEBUG [33c7bdaa] Finished in 0.921 seconds with exit status 0 (successful).
+  INFO [d65e2f39] Running /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040945/storage/framework/testing as ubuntu@13.211.171.135
+ DEBUG [d65e2f39] Command: /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040945/storage/framework/testing
+  INFO [4b9b1659] Finished in 0.762 seconds with exit status 0 (successful).
+  INFO [ec934ee7] Running /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/testing /home/ubuntu/app/releases/20190715040945/storage/framework/testing as ubuntu@13.211.171.135
+ DEBUG [ec934ee7] Command: /usr/bin/env ln -s /home/ubuntu/app/shared/storage/framework/testing /home/ubuntu/app/releases/20190715040945/storage/framework/testing
+  INFO [6296f6d4] Finished in 0.751 seconds with exit status 0 (successful).
+ DEBUG [78a53cc3] Running [ -L /home/ubuntu/app/releases/20190715040945/storage/logs ] as ubuntu@13.211.171.135
+ DEBUG [78a53cc3] Command: [ -L /home/ubuntu/app/releases/20190715040945/storage/logs ]
+ DEBUG [84ee181d] Finished in 0.747 seconds with exit status 1 (failed).
+ DEBUG [0775532a] Running [ -d /home/ubuntu/app/releases/20190715040945/storage/logs ] as ubuntu@13.211.171.135
+ DEBUG [0775532a] Command: [ -d /home/ubuntu/app/releases/20190715040945/storage/logs ]
+ DEBUG [528deddb] Finished in 0.753 seconds with exit status 0 (successful).
+  INFO [0d81d36e] Running /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040945/storage/logs as ubuntu@13.211.171.135
+ DEBUG [0d81d36e] Command: /usr/bin/env rm -rf /home/ubuntu/app/releases/20190715040945/storage/logs
+  INFO [af7e5545] Finished in 0.751 seconds with exit status 0 (successful).
+  INFO [0eb57818] Running /usr/bin/env ln -s /home/ubuntu/app/shared/storage/logs /home/ubuntu/app/releases/20190715040945/storage/logs as ubuntu@13.211.171.135
+ DEBUG [0eb57818] Command: /usr/bin/env ln -s /home/ubuntu/app/shared/storage/logs /home/ubuntu/app/releases/20190715040945/storage/logs
+  INFO [ba33acc8] Finished in 0.756 seconds with exit status 0 (successful).
+  INFO [14e4636a] Running vendorDir=/home/ubuntu/app/current/vendor; if [ -d $vendorDir ] || [ -h $vendorDir ]; then cp -a $vendorDir /home/ubuntu/app/releases/20190715040945/vendor; fi; as ubuntu@13.211.171.135
+ DEBUG [14e4636a] Command: vendorDir=/home/ubuntu/app/current/vendor; if [ -d $vendorDir ] || [ -h $vendorDir ]; then cp -a $vendorDir /home/ubuntu/app/releases/20190715040945/vendor; fi;
+  INFO [dcd3c4ad] Finished in 0.876 seconds with exit status 0 (successful).
+ DEBUG [db9d241a] Running if test ! -d /home/ubuntu/app/releases/20190715040945; then echo "Directory does not exist '/home/ubuntu/app/releases/20190715040945'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [db9d241a] Command: if test ! -d /home/ubuntu/app/releases/20190715040945; then echo "Directory does not exist '/home/ubuntu/app/releases/20190715040945'" 1>&2; false; fi
+ DEBUG [5c17c8b6] Finished in 0.756 seconds with exit status 0 (successful).
+  INFO [61b13229] Running /usr/bin/env composer install --no-dev --quiet --prefer-dist --optimize-autoloader as ubuntu@13.211.171.135
+ DEBUG [61b13229] Command: cd /home/ubuntu/app/releases/20190715040945 && /usr/bin/env composer install --no-dev --quiet --prefer-dist --optimize-autoloader
+  INFO [4b398104] Finished in 2.774 seconds with exit status 0 (successful).
+  INFO [925e032e] Running /usr/bin/env sudo chmod -R ug+rwx /home/ubuntu/app/shared/storage/ /home/ubuntu/app/releases/20190715040945/bootstrap/cache/ as ubuntu@13.211.171.135
+ DEBUG [925e032e] Command: /usr/bin/env sudo chmod -R ug+rwx /home/ubuntu/app/shared/storage/ /home/ubuntu/app/releases/20190715040945/bootstrap/cache/
+  INFO [967104b8] Finished in 0.752 seconds with exit status 0 (successful).
+  INFO [e0a6cfa0] Running /usr/bin/env sudo chgrp -R www-data /home/ubuntu/app/shared/storage/ /home/ubuntu/app/releases/20190715040945/bootstrap/cache/ as ubuntu@13.211.171.135
+ DEBUG [e0a6cfa0] Command: /usr/bin/env sudo chgrp -R www-data /home/ubuntu/app/shared/storage/ /home/ubuntu/app/releases/20190715040945/bootstrap/cache/
+  INFO [36d9fb6c] Finished in 0.759 seconds with exit status 0 (successful).
+  INFO [33ed0608] Running cp /home/ubuntu/app/releases/20190715040945/.env.server /home/ubuntu/app/releases/20190715040945/.env as ubuntu@13.211.171.135
+ DEBUG [33ed0608] Command: cp /home/ubuntu/app/releases/20190715040945/.env.server /home/ubuntu/app/releases/20190715040945/.env
+  INFO [7c6a64a1] Finished in 0.750 seconds with exit status 0 (successful).
+  INFO [119cd0ff] Running sed --in-place -f /home/ubuntu/app/overlay/parameters.sed /home/ubuntu/app/releases/20190715040945/.env as ubuntu@13.211.171.135
+ DEBUG [119cd0ff] Command: sed --in-place -f /home/ubuntu/app/overlay/parameters.sed /home/ubuntu/app/releases/20190715040945/.env
+  INFO [8670ded1] Finished in 0.890 seconds with exit status 0 (successful).
+  INFO [5698e7ee] Running /usr/bin/env ln -s /home/ubuntu/app/releases/20190715040945 /home/ubuntu/app/releases/current as ubuntu@13.211.171.135
+ DEBUG [5698e7ee] Command: /usr/bin/env ln -s /home/ubuntu/app/releases/20190715040945 /home/ubuntu/app/releases/current
+  INFO [aed1f56b] Finished in 0.879 seconds with exit status 0 (successful).
+  INFO [3bc0cd5c] Running /usr/bin/env mv /home/ubuntu/app/releases/current /home/ubuntu/app as ubuntu@13.211.171.135
+ DEBUG [3bc0cd5c] Command: /usr/bin/env mv /home/ubuntu/app/releases/current /home/ubuntu/app
+  INFO [09166120] Finished in 0.854 seconds with exit status 0 (successful).
+ DEBUG [260515f5] Running /usr/bin/env ls -x /home/ubuntu/app/releases as ubuntu@13.211.171.135
+ DEBUG [260515f5] Command: /usr/bin/env ls -x /home/ubuntu/app/releases
+ DEBUG [dca71254] 	20190714034224	20190714043812	20190714044108	20190715035231	20190715035359
+20190715040135	20190715040533	20190715040945
+ DEBUG [dca71254] Finished in 0.985 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 8 deployed releases on 13.211.171.135
+ DEBUG [17081bbe] Running [ -d /home/ubuntu/app/current ] as ubuntu@13.211.171.135
+ DEBUG [17081bbe] Command: [ -d /home/ubuntu/app/current ]
+ DEBUG [fc0023ce] Finished in 0.919 seconds with exit status 0 (successful).
+ DEBUG [52d303a0] Running /usr/bin/env readlink /home/ubuntu/app/current as ubuntu@13.211.171.135
+ DEBUG [52d303a0] Command: /usr/bin/env readlink /home/ubuntu/app/current
+ DEBUG [e6014833] 	/home/ubuntu/app/releases/20190715040945
+ DEBUG [e6014833] Finished in 0.920 seconds with exit status 0 (successful).
+  INFO [3cc4f669] Running /usr/bin/env rm -rf /home/ubuntu/app/releases/20190714034224 /home/ubuntu/app/releases/20190714043812 /home/ubuntu/app/releases/20190714044108 as ubuntu@13.211.171.135
+ DEBUG [3cc4f669] Command: /usr/bin/env rm -rf /home/ubuntu/app/releases/20190714034224 /home/ubuntu/app/releases/20190714043812 /home/ubuntu/app/releases/20190714044108
+  INFO [09b0bd3a] Finished in 0.919 seconds with exit status 0 (successful).
+ DEBUG [2e401c94] Running if test ! -d /home/ubuntu/app/releases; then echo "Directory does not exist '/home/ubuntu/app/releases'" 1>&2; false; fi as ubuntu@13.211.171.135
+ DEBUG [2e401c94] Command: if test ! -d /home/ubuntu/app/releases; then echo "Directory does not exist '/home/ubuntu/app/releases'" 1>&2; false; fi
+ DEBUG [4e295823] Finished in 0.919 seconds with exit status 0 (successful).
+  INFO [6aed6bc4] Running /usr/bin/env echo "Branch develop (at 423072ca911863c8e3ae1ac6c295204275a84ba1) deployed as release 20190715040945 by praneen" >> /home/ubuntu/app/revisions.log as ubuntu@13.211.171.135
+ DEBUG [6aed6bc4] Command: cd /home/ubuntu/app/releases && /usr/bin/env echo "Branch develop (at 423072ca911863c8e3ae1ac6c295204275a84ba1) deployed as release 20190715040945 by praneen" >> /home/ubuntu/app/revisions.log
+  INFO [0eb1e99d] Finished in 0.854 seconds with exit status 0 (successful).
+  INFO [bbba8073] Running /usr/bin/env sudo systemctl reload nginx as ubuntu@13.211.171.135
+ DEBUG [bbba8073] Command: /usr/bin/env sudo systemctl reload nginx
+  INFO [7dff7564] Finished in 0.881 seconds with exit status 0 (successful).
+  INFO [dfddd8ab] Running /usr/bin/env sudo systemctl reload php7.2-fpm as ubuntu@13.211.171.135
+ DEBUG [dfddd8ab] Command: /usr/bin/env sudo systemctl reload php7.2-fpm
+  INFO [d2e55c82] Finished in 0.852 seconds with exit status 0 (successful).

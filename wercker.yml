@@ -1,0 +1,18 @@
+box:
+  id: amritgc/nginx-php:php71
+  ports:
+    - "8888"
+
+dev:
+  steps:
+   - install-packages:
+      packages: git
+   - script:
+      name: install composer
+      code: curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+   - script:
+      name: install dependencies
+      code: composer install --no-interaction
+   - internal/watch:
+      code: php -S 0.0.0.0:8888 public/index.php
+      reload: true

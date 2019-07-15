@@ -7,7 +7,7 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
-server "13.211.171.135", user: "ubuntu", roles: %w{app}
+server "13.211.171.135", user: "ubuntu", roles: %w{app composer laravel}
 
 # role-based syntax
 # ==================

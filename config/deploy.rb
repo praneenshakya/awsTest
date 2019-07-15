@@ -10,6 +10,14 @@ ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/home/ubuntu/app"
 
+append :linked_dirs,
+       'storage/app',
+       'storage/framework/cache',
+       'storage/framework/sessions',
+       'storage/framework/views',
+       'storage/framework/testing',
+       'storage/logs'
+
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 
@@ -48,10 +56,32 @@ namespace :app do
          execute "sed --in-place -f #{fetch(:overlay_path)}/parameters.sed #{release_path}/.env"
         end
     end
+end
 
+namespace :nginx do
+    desc 'Reload nginx server'
+    task :reload do
+      on roles(:all) do
+        execute :sudo, :systemctl, 'reload nginx'
+      end
+    end
+end
+
+namespace :fpm do
+    desc 'Reload php-fpm server'
+    task :reload do
+      on roles(:all) do
+        execute :sudo, :systemctl, 'reload php7.2-fpm'
+      end
+    end
+end
 
 namespace :deploy do
     after :updated, 'composer:vendor_copy'
     after :updated, 'composer:install'
     after :updated, 'laravel:set_permission'
+    after :updated, 'app:set_variables'
 end
+
+after 'deploy',   'nginx:reload'
+after 'deploy',   'fpm:reload'
